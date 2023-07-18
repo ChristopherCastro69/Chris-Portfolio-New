@@ -17,12 +17,12 @@ import { Pagination } from 'swiper/modules';
 const Testimonials = () => {
   return (
     <section className="testimonial container section">
-         <h2 className="section_title">My clients experience</h2>
-      <span className="section_subtitle">Testimonial</span>
+        <h2 className="section_title">My clients experience</h2>
+        <span className="section_subtitle">Testimonial</span>
 
       <Swiper className="testimonial_container"
-      
-      loop={true}
+    //   loop={true}
+ 
       grabCursor={true}
       spaceBetween={24}
       pagination={{
@@ -40,6 +40,7 @@ const Testimonials = () => {
         
       }}
       modules={[Pagination]}
+      
       >
         {Data.map(({id, image, title, description}) => {
             return(
@@ -49,9 +50,10 @@ const Testimonials = () => {
                         <h3 className="testimonial_name">{title}</h3>
                         <p className="testimonial_description">{description}</p>
                 </SwiperSlide>
-            );
+            )
         })}
       </Swiper>
+
     </section>
   )
 }

@@ -11,7 +11,7 @@ const Social = () => {
         <i class="uil uil-facebook-f"></i>
         </a>
 
-        <a href="https://www.linkedin.com/in/christopher-c-083561124/" className="home_social-icon" target="_blank">
+        <a href="https://www.linkedin.com/in/christopher-c-083561124" className="home_social-icon" target="_blank">
         <i class="uil uil-linkedin-alt"></i>
         </a>
     </div>
