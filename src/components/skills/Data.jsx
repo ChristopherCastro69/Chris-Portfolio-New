@@ -1,9 +1,9 @@
 import React from "react";
 
-const Frontend = () => {
+const Data = () => {
   return (
     <div className="skills_content">
-      <h3 className="skills_title">Frontend Skills</h3>
+      <h3 className="skills_title">Data Skills</h3>
       <div className="skills_box">
         <div className="skills_group">
           {/* 1st */}
@@ -11,18 +11,18 @@ const Frontend = () => {
             <i class="bx bx-badge-check"></i>
 
             <div>
-              <h3 className="skills_name">HTML/CSS</h3>
+              <h3 className="skills_name">Python</h3>
               <span className="skills_level">Advanced</span>
             </div>
           </div>
 
-          {/* 2nd */}
+          {/* 4th */}
           <div className="skills_data">
             <i class="bx bx-badge-check"></i>
 
             <div>
-              <h3 className="skills_name">Javascript</h3>
-              <span className="skills_level">Intermediate</span>
+              <h3 className="skills_name">Jupyter Notebook</h3>
+              <span className="skills_level">Advanced</span>
             </div>
           </div>
 
@@ -31,16 +31,16 @@ const Frontend = () => {
             <i class="bx bx-badge-check"></i>
 
             <div>
-              <h3 className="skills_name">React</h3>
-              <span className="skills_level">Intermediate</span>
+              <h3 className="skills_name">Google Colab</h3>
+              <span className="skills_level">Advanced</span>
             </div>
           </div>
-          {/* 4th */}
+          {/* 2nd */}
           <div className="skills_data">
             <i class="bx bx-badge-check"></i>
 
             <div>
-              <h3 className="skills_name">Material UI</h3>
+              <h3 className="skills_name">NumPy</h3>
               <span className="skills_level">Intermediate</span>
             </div>
           </div>
@@ -49,16 +49,17 @@ const Frontend = () => {
             <i class="bx bx-badge-check"></i>
 
             <div>
-              <h3 className="skills_name">Tailwind</h3>
+              <h3 className="skills_name">Pandas</h3>
               <span className="skills_level">Intermediate</span>
             </div>
           </div>
+
           {/* 5th */}
           <div className="skills_data">
             <i class="bx bx-badge-check"></i>
 
             <div>
-              <h3 className="skills_name">Vue.js</h3>
+              <h3 className="skills_name">PowerBI</h3>
               <span className="skills_level">Basic</span>
             </div>
           </div>
@@ -68,7 +69,7 @@ const Frontend = () => {
             <i class="bx bx-badge-check"></i>
 
             <div>
-              <h3 className="skills_name">Typescript</h3>
+              <h3 className="skills_name">Tensorflow</h3>
               <span className="skills_level">Basic</span>
             </div>
           </div>
@@ -78,4 +79,4 @@ const Frontend = () => {
   );
 };
 
-export default Frontend;
+export default Data;

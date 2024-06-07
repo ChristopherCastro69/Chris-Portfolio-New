@@ -1,229 +1,78 @@
-import React,{ useState } from 'react'
+import React, { useState } from "react";
 import "./services.css";
 
 const Services = () => {
-  const[toggleState, setToggleState] = useState(0);
+  const [toggleState, setToggleState] = useState(0);
 
   const toggleTab = (index) => {
     setToggleState(index);
-  }
+  };
   return (
     <section className="services section" id="services">
-      <h2 className="section_title">Services</h2>
+      <h2 className="section_title">My Expertise</h2>
       <span className="section_subtitle">What I offer</span>
 
       <div className="services_container container grid">
-{/* Part 1 */}
+        {/* Part 1 */}
         <div className="services_content">
           <div>
             {/* //logo  */}
-            <i className="uil uil-web-grid services_icon"></i>
+            <i className="uil uil-mobile-android services_icon"></i>
 
-            <h3 className="services_title">Product <br/> Designer</h3>
+            <h3 className="services_title">
+              App <br /> Development
+            </h3>
           </div>
 
-          <span className="services_button" onClick={() => toggleTab(1)}>
-            View More
-                <i className="uil uil-arrow-right services_button-icon"></i>
+          <span className="services_button">
+            I focus on app development as it allows me to combine my creativity
+            and technical expertise. This unique blend helps me craft digital
+            solutions that have a tangible impact on businesses and individuals
+            worldwide, making a meaningful difference.
+            {/* <i className="uil uil-arrow-right services_button-icon"></i> */}
           </span>
-
-          <div className={toggleState === 1 ? "services_modal active-modal" : "services_modal"}>
-            <div className="services_modal-content">
-              <i onClick={() => toggleTab(0)}className="uil uil-times services_modal-close"></i>
-
-              <h3 className="services_modal-title">Product Designer</h3>
-              <p className="services_modal-description">
-                Service with more than a year of experience. Providing quality work to clients and companies.
-              </p>
-
-              <ul className="services_modal-services grid">
-                {/* 1st */}
-                <li className="services_modal-service">
-                  <i className="uil uil-check-circle services_modal-icon">   </i>
-                    <p className="services_modal_info">
-                      I develop the user interface.
-                    </p>              
-                </li>
-
-                {/* 2nd */}
-                <li className="services_modal-service">
-                  <i className="uil uil-check-circle services_modal-icon">   </i>
-                    <p className="services_modal_info">
-                      Web page development.
-                    </p>           
-                </li>
-
-                {/* 2nd */}
-                <li className="services_modal-service">
-                  <i className="uil uil-check-circle services_modal-icon"> </i>
-                    <p className="services_modal_info">
-                      I make proftable business decisions.
-                    </p>              
-                </li>
-
-                {/* 3rd */}
-                <li className="services_modal-service">
-                  <i className="uil uil-check-circle services_modal-icon"> </i>
-                    <p className="services_modal_info">
-                      I position your company brand.
-                    </p>              
-                </li>
-
-                {/* 4th */}
-                <li className="services_modal-service">
-                  <i className="uil uil-check-circle services_modal-icon"> </i>
-                    <p className="services_modal_info">
-                      I am a team leader.
-                    </p>              
-                </li>
-
-
-              </ul>
-            </div>
-          </div>
-
         </div>
 
-{/* Part 2 */}
+        {/* Part 2 */}
         <div className="services_content">
           <div>
             {/* logo */}
-            <i className="uil uil-arrow services_icon"></i>
-            <h3 className="services_title">Data <br/>Scientist</h3>
+            <i className="uil uil-arrow-growth services_icon"></i>
+            <h3 className="services_title">
+              Data <br />
+              Science
+            </h3>
           </div>
 
-          <span onClick={() => toggleTab(1)} className="services_button" >View More
-                <i className="uil uil-arrow-right services_button-icon"></i>
+          <span className="services_button">
+            With the growing importance of big data, I pursued data science and
+            analytics to drive informed decision-making and address complex
+            problems. By uncovering valuable patterns and insights deeply
+            embedded in data, I aim to make impactful, data-driven solutions.
           </span>
-
-          <div className={toggleState === 2 ? "services_modal active-modal" : "services_modal"}>
-            <div className="services_modal-content">
-            <i onClick={() => toggleTab(0)}className="uil uil-times services_modal-close"></i>
-
-              <h3 className="services_modal-title">Data Scienctist</h3>
-              <p className="services_modal-description">
-                Service with more than a year of experience. Providing quality work to clients and companies.
-              </p>
-
-              <ul className="services_modal-services grid">
-                {/* 1st */}
-                <li className="services_modal-service">
-                  <i className="uil uil-check-circle services_modal-icon">   </i>
-                    <p className="services_modal_info">
-                      I develop the user interface.
-                    </p>              
-                </li>
-
-                {/* 2nd */}
-                <li className="services_modal-service">
-                  <i className="uil uil-check-circle services_modal-icon">   </i>
-                    <p className="services_modal_info">
-                      Web page development.
-                    </p>           
-                </li>
-
-                {/* 2nd */}
-                <li className="services_modal-service">
-                  <i className="uil uil-check-circle services_modal-icon"> </i>
-                    <p className="services_modal_info">
-                      I make proftable business decisions.
-                    </p>              
-                </li>
-
-                {/* 3rd */}
-                <li className="services_modal-service">
-                  <i className="uil uil-check-circle services_modal-icon"> </i>
-                    <p className="services_modal_info">
-                      I position your company brand.
-                    </p>              
-                </li>
-
-                {/* 4th */}
-                <li className="services_modal-service">
-                  <i className="uil uil-check-circle services_modal-icon"> </i>
-                    <p className="services_modal_info">
-                      I am a team leader.
-                    </p>              
-                </li>
-
-
-              </ul>
-            </div>
-          </div>
-
         </div>
 
-{/* Part 3 */}
+        {/* Part 3 */}
         <div className="services_content">
           <div>
             {/* logo */}
-            <i className="uil uil-edit services_icon"></i>
-            <h3 className="services_title">Business <br/> Intelligence</h3>
+            <i className="uil uil-window services_icon"></i>
+            <h3 className="services_title">
+              Full-Stack <br /> Development
+            </h3>
           </div>
 
-          <span onClick={() => toggleTab(1)} className="services_button">View More
-                <i className="uil uil-arrow-right services_button-icon"></i>
+          <span className="services_button">
+            I engage in full-stack development to leverage my technical
+            expertise, creativity, and problem-solving skills. By working on
+            both frontend and backend, I create seamless, efficient, and
+            user-friendly digital solutions that make technology more accessible
+            and impactful.
           </span>
-
-          <div className={toggleState === 3 ? "services_modal active-modal" : "services_modal"}>
-            <div className="services_modal-content">
-            <i onClick={() => toggleTab(0)}className="uil uil-times services_modal-close"></i>
-
-              <h3 className="services_modal-title">Business Analyst</h3>
-              <p className="services_modal-description">
-                Service with more than a year of experience. Providing quality work to clients and companies.
-              </p>
-
-              <ul className="services_modal-services grid">
-                {/* 1st */}
-                <li className="services_modal-service">
-                  <i className="uil uil-check-circle services_modal-icon">   </i>
-                    <p className="services_modal_info">
-                      I develop the user interface.
-                    </p>              
-                </li>
-
-                {/* 2nd */}
-                <li className="services_modal-service">
-                  <i className="uil uil-check-circle services_modal-icon">   </i>
-                    <p className="services_modal_info">
-                      Web page development.
-                    </p>           
-                </li>
-
-                {/* 2nd */}
-                <li className="services_modal-service">
-                  <i className="uil uil-check-circle services_modal-icon"> </i>
-                    <p className="services_modal_info">
-                      I make proftable business decisions.
-                    </p>              
-                </li>
-
-                {/* 3rd */}
-                <li className="services_modal-service">
-                  <i className="uil uil-check-circle services_modal-icon"> </i>
-                    <p className="services_modal_info">
-                      I position your company brand.
-                    </p>              
-                </li>
-
-                {/* 4th */}
-                <li className="services_modal-service">
-                  <i className="uil uil-check-circle services_modal-icon"> </i>
-                    <p className="services_modal_info">
-                      I am a team leader.
-                    </p>              
-                </li>
-
-
-              </ul>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Services
+export default Services;
