@@ -8,9 +8,9 @@ const Qualification = () => {
     setToggleState(index);
   };
   return (
-    <section className="qualification section" id="portfolio">
+    <section className="qualification section" id="qualifications">
       <h2 className="section_title">Qualification</h2>
-      <span className="section_subtitle">My Projects</span>
+      <span className="section_subtitle">My Knowledge</span>
 
       <div className="qualification_container container">
         <div className="qualification_tabs">
@@ -84,7 +84,7 @@ const Qualification = () => {
                 <span className="qualification_subtitle">Udemy</span>
                 <div className="qualification_calendar">
                   <i className="uil uil-calendar-alt"></i>
-                  2023 - Present
+                  2023 - 2024
                 </div>
               </div>
             </div>
@@ -98,7 +98,7 @@ const Qualification = () => {
                 <span className="qualification_subtitle">Udemy</span>
                 <div className="qualification_calendar">
                   <i className="uil uil-calendar-alt"></i>
-                  2023 - Present
+                  2023 - 2024
                 </div>
               </div>
               <div>
@@ -123,7 +123,7 @@ const Qualification = () => {
                 <span className="qualification_subtitle">Udemy</span>
                 <div className="qualification_calendar">
                   <i className="uil uil-calendar-alt"></i>
-                  2022 - Present
+                  2022 - 2024
                 </div>
               </div>
             </div>
@@ -137,7 +137,7 @@ const Qualification = () => {
                 <span className="qualification_subtitle">Udemy</span>
                 <div className="qualification_calendar">
                   <i className="uil uil-calendar-alt"></i>
-                  2023 - Present
+                  2022 - 2024
                 </div>
               </div>
               <div>
@@ -164,7 +164,7 @@ const Qualification = () => {
                 </span>
                 <div className="qualification_calendar">
                   <i className="uil uil-calendar-alt"></i>
-                  2023 - Present
+                  August 26, 2023
                 </div>
               </div>
               <div>
@@ -191,7 +191,7 @@ const Qualification = () => {
                 </span>
                 <div className="qualification_calendar">
                   <i className="uil uil-calendar-alt"></i>
-                  2023 - Present
+                  May 04,2024
                 </div>
               </div>
             </div>
@@ -205,7 +205,7 @@ const Qualification = () => {
                 </span>
                 <div className="qualification_calendar">
                   <i className="uil uil-calendar-alt"></i>
-                  2023 - Present
+                  February 17, 2024
                 </div>
               </div>
               <div>

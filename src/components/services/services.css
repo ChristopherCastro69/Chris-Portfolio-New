@@ -3,7 +3,9 @@
   justify-content: center;
   column-gap: 1.8rem;
 }
-
+.section_subtitle {
+  margin-bottom: var(--mb-2);
+}
 .services_content {
   position: relative;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -59,7 +61,7 @@
 }
 
 .services_modal-content {
-  width: 500px;
+  width: 850px;
   position: relative;
   background-color: var(--container-color);
   padding: 4.5rem 2.5rem 2.5rem;

@@ -1,16 +1,16 @@
-import React from 'react'
+import React from "react";
 import "./project.css";
-import Works from './Works';
+import Works from "./Works";
 
 const Project = () => {
   return (
-    <section className="work section" id="project">
-        <h2 className="section_title">Projects</h2>
-        <span className="section_subtitle">Most recent works</span>
+    <section className="work section" id="projects">
+      <h2 className="section_title">Projects</h2>
+      <span className="section_subtitle">Most recent works</span>
 
-        <Works/>
+      <Works />
     </section>
-  )
-}
+  );
+};
 
-export default Project
+export default Project;

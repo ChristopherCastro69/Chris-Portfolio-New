@@ -13,7 +13,7 @@ const Social = () => {
       </a>
 
       <a
-        href="https://www.facebook.com/topitops05?mibextid=ZbWKwL    "
+        href="https://www.facebook.com/topitops05?mibextid=ZbWKwL"
         className="home_social-icon"
         target="_blank"
         rel="noreferrer"

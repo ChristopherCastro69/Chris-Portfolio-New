@@ -31,20 +31,36 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 1.25rem;
   border-radius: 1rem;
+  transition: transform 0.3s ease;
+  width: 330px;
 }
-
+.work_card:hover .work_img {
+  transform: scale(1.02);
+}
 .work_img {
   object-fit: cover;
   width: 295px;
   height: 194px;
   border-radius: 1rem;
   margin-bottom: var(--mb-1);
+  transition: transform 0.3s ease;
 }
 
 .work_title {
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
-  margin-bottom: var(--mb-0-5);
+}
+.work_desc {
+  color: var(--text-color);
+  font-size: 12px;
+  display: block; /* Change flex to block */
+  align-items: center;
+  margin-bottom: var(--mb-1);
+}
+
+.work_buttons {
+  display: flex;
+  margin-top: 0.5rem;
 }
 
 .work_button {
@@ -53,15 +69,19 @@
   display: flex;
   align-items: center;
   column-gap: 0.25rem;
+  background: none; /* Remove default background */
+  cursor: pointer; /* Ensure it looks clickable */
+  outline: none; /* Remove default outline */
 }
 
 .work_button-icon {
-  font-size: 1rem;
+  font-size: 1.3rem;
   transition: 0.4s;
+  margin-right: 0.5rem;
 }
 
 .work_button:hover .work_button-icon {
-  transform: translateX(0.25rem);
+  transform: translateY(-0.25rem);
 }
 
 /* Active Work */
