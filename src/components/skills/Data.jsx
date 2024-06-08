@@ -8,7 +8,7 @@ const Data = () => {
         <div className="skills_group">
           {/* 1st */}
           <div className="skills_data">
-            <i class="bx bx-badge-check"></i>
+            <i className="bx bx-badge-check"></i>
 
             <div>
               <h3 className="skills_name">Python</h3>
@@ -18,7 +18,7 @@ const Data = () => {
 
           {/* 4th */}
           <div className="skills_data">
-            <i class="bx bx-badge-check"></i>
+            <i className="bx bx-badge-check"></i>
 
             <div>
               <h3 className="skills_name">Jupyter Notebook</h3>
@@ -28,7 +28,7 @@ const Data = () => {
 
           {/* 3rd */}
           <div className="skills_data">
-            <i class="bx bx-badge-check"></i>
+            <i className="bx bx-badge-check"></i>
 
             <div>
               <h3 className="skills_name">Google Colab</h3>
@@ -37,7 +37,7 @@ const Data = () => {
           </div>
           {/* 2nd */}
           <div className="skills_data">
-            <i class="bx bx-badge-check"></i>
+            <i className="bx bx-badge-check"></i>
 
             <div>
               <h3 className="skills_name">NumPy</h3>
@@ -46,7 +46,7 @@ const Data = () => {
           </div>
           {/* 6th */}
           <div className="skills_data">
-            <i class="bx bx-badge-check"></i>
+            <i className="bx bx-badge-check"></i>
 
             <div>
               <h3 className="skills_name">Pandas</h3>
@@ -56,7 +56,7 @@ const Data = () => {
 
           {/* 5th */}
           <div className="skills_data">
-            <i class="bx bx-badge-check"></i>
+            <i className="bx bx-badge-check"></i>
 
             <div>
               <h3 className="skills_name">PowerBI</h3>
@@ -66,7 +66,7 @@ const Data = () => {
 
           {/* 7th */}
           <div className="skills_data">
-            <i class="bx bx-badge-check"></i>
+            <i className="bx bx-badge-check"></i>
 
             <div>
               <h3 className="skills_name">Tensorflow</h3>

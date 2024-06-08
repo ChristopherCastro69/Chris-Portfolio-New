@@ -4,7 +4,7 @@ const Info = () => {
   return (
     <div className="about_info grid">
       <div className="about_box">
-        <i class="bx bxs-bolt about_icon"></i>
+        <i className="bx bxs-bolt about_icon"></i>
 
         <h3 className="about_title">Adaptable</h3>
         <p className="about_subtitle">
@@ -13,7 +13,7 @@ const Info = () => {
       </div>
 
       <div className="about_box">
-        <i class="bx bxs-florist about_icon"></i>
+        <i className="bx bxs-florist about_icon"></i>
 
         <h3 className="about_title">Team player</h3>
         <p className="about_subtitle">
@@ -22,7 +22,7 @@ const Info = () => {
       </div>
 
       <div className="about_box">
-        <i class="bx bxs-book-reader about_icon"></i>
+        <i className="bx bxs-book-reader about_icon"></i>
 
         <h3 className="about_title">Solver</h3>
         <p className="about_subtitle">

@@ -8,7 +8,7 @@ const Frontend = () => {
         <div className="skills_group">
           {/* 1st */}
           <div className="skills_data">
-            <i class="bx bx-badge-check"></i>
+            <i className="bx bx-badge-check"></i>
 
             <div>
               <h3 className="skills_name">HTML/CSS</h3>
@@ -18,7 +18,7 @@ const Frontend = () => {
 
           {/* 2nd */}
           <div className="skills_data">
-            <i class="bx bx-badge-check"></i>
+            <i className="bx bx-badge-check"></i>
 
             <div>
               <h3 className="skills_name">Javascript</h3>
@@ -28,7 +28,7 @@ const Frontend = () => {
 
           {/* 3rd */}
           <div className="skills_data">
-            <i class="bx bx-badge-check"></i>
+            <i className="bx bx-badge-check"></i>
 
             <div>
               <h3 className="skills_name">React</h3>
@@ -37,7 +37,7 @@ const Frontend = () => {
           </div>
           {/* 4th */}
           <div className="skills_data">
-            <i class="bx bx-badge-check"></i>
+            <i className="bx bx-badge-check"></i>
 
             <div>
               <h3 className="skills_name">Material UI</h3>
@@ -46,7 +46,7 @@ const Frontend = () => {
           </div>
           {/* 6th */}
           <div className="skills_data">
-            <i class="bx bx-badge-check"></i>
+            <i className="bx bx-badge-check"></i>
 
             <div>
               <h3 className="skills_name">Tailwind</h3>
@@ -55,7 +55,7 @@ const Frontend = () => {
           </div>
           {/* 5th */}
           <div className="skills_data">
-            <i class="bx bx-badge-check"></i>
+            <i className="bx bx-badge-check"></i>
 
             <div>
               <h3 className="skills_name">Vue.js</h3>
@@ -65,7 +65,7 @@ const Frontend = () => {
 
           {/* 7th */}
           <div className="skills_data">
-            <i class="bx bx-badge-check"></i>
+            <i className="bx bx-badge-check"></i>
 
             <div>
               <h3 className="skills_name">Typescript</h3>

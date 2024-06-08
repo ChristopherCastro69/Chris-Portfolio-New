@@ -8,7 +8,7 @@ const Tools = () => {
         <div className="skills_group">
           {/* 7th */}
           <div className="skills_data">
-            <i class="bx bx-badge-check"></i>
+            <i className="bx bx-badge-check"></i>
 
             <div>
               <h3 className="skills_name">Android Studio (Java/Kotlin)</h3>
@@ -17,7 +17,7 @@ const Tools = () => {
           </div>
           {/* 1st */}
           <div className="skills_data">
-            <i class="bx bx-badge-check"></i>
+            <i className="bx bx-badge-check"></i>
 
             <div>
               <h3 className="skills_name">Git</h3>
@@ -27,7 +27,7 @@ const Tools = () => {
 
           {/* 2nd */}
           <div className="skills_data">
-            <i class="bx bx-badge-check"></i>
+            <i className="bx bx-badge-check"></i>
 
             <div>
               <h3 className="skills_name">Firebase</h3>
@@ -37,7 +37,7 @@ const Tools = () => {
 
           {/* 3rd */}
           <div className="skills_data">
-            <i class="bx bx-badge-check"></i>
+            <i className="bx bx-badge-check"></i>
 
             <div>
               <h3 className="skills_name">Google Colab</h3>
@@ -46,7 +46,7 @@ const Tools = () => {
           </div>
           {/* 4th */}
           <div className="skills_data">
-            <i class="bx bx-badge-check"></i>
+            <i className="bx bx-badge-check"></i>
 
             <div>
               <h3 className="skills_name">VS Code</h3>
@@ -55,7 +55,7 @@ const Tools = () => {
           </div>
           {/* 6th */}
           <div className="skills_data">
-            <i class="bx bx-badge-check"></i>
+            <i className="bx bx-badge-check"></i>
 
             <div>
               <h3 className="skills_name">Postman</h3>
@@ -64,7 +64,7 @@ const Tools = () => {
           </div>
           {/* 5th */}
           <div className="skills_data">
-            <i class="bx bx-badge-check"></i>
+            <i className="bx bx-badge-check"></i>
 
             <div>
               <h3 className="skills_name">Streamlit</h3>

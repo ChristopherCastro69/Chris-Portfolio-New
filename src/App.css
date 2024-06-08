@@ -203,6 +203,27 @@ img {
 }
 
 @media screen and (max-width: 576px) {
+  .container {
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
+
+  .section_title {
+    font-size: var(--h2-font-size);
+  }
+
+  .section_subtitle {
+    font-size: var(--smaller-font-size);
+  }
+
+  .button {
+    padding: 0.75rem 1.5rem;
+  }
+
+  .button__icon {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 /* For small devices */

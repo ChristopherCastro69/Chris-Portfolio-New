@@ -8,7 +8,7 @@ const Backend = () => {
         <div className="skills_group">
           {/* 5th */}
           <div className="skills_data">
-            <i class="bx bx-badge-check"></i>
+            <i className="bx bx-badge-check"></i>
 
             <div>
               <h3 className="skills_name">Java Springboot</h3>
@@ -17,7 +17,7 @@ const Backend = () => {
           </div>
           {/* 7th */}
           <div className="skills_data">
-            <i class="bx bx-badge-check"></i>
+            <i className="bx bx-badge-check"></i>
 
             <div>
               <h3 className="skills_name">Node.js</h3>
@@ -26,7 +26,7 @@ const Backend = () => {
           </div>
           {/* 3rd */}
           <div className="skills_data">
-            <i class="bx bx-badge-check"></i>
+            <i className="bx bx-badge-check"></i>
 
             <div>
               <h3 className="skills_name">MySQL</h3>
@@ -35,7 +35,7 @@ const Backend = () => {
           </div>
           {/* 1st */}
           <div className="skills_data">
-            <i class="bx bx-badge-check"></i>
+            <i className="bx bx-badge-check"></i>
 
             <div>
               <h3 className="skills_name">RESTful API Design</h3>
@@ -44,7 +44,7 @@ const Backend = () => {
           </div>
           {/* 1st */}
           <div className="skills_data">
-            <i class="bx bx-badge-check"></i>
+            <i className="bx bx-badge-check"></i>
 
             <div>
               <h3 className="skills_name">Railway</h3>
@@ -54,7 +54,7 @@ const Backend = () => {
 
           {/* 6th */}
           <div className="skills_data">
-            <i class="bx bx-badge-check"></i>
+            <i className="bx bx-badge-check"></i>
 
             <div>
               <h3 className="skills_name">Django</h3>
@@ -63,7 +63,7 @@ const Backend = () => {
           </div>
           {/* 6th */}
           <div className="skills_data">
-            <i class="bx bx-badge-check"></i>
+            <i className="bx bx-badge-check"></i>
 
             <div>
               <h3 className="skills_name">MongoDB</h3>

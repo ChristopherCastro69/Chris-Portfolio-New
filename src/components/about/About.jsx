@@ -1,19 +1,19 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./about.css";
-import AboutImg from "..//../assets/about.jpg";
-import img1 from "..//../assets/img.jpg";
-import img2 from "..//../assets/img2.jpg";
-import img3 from "..//../assets/img3.jpg";
-import img6 from "..//../assets/img6.jpg";
-import img7 from "..//../assets/img7.jpg";
+import AboutImg from "../../assets/about.jpg";
+import img1 from "../../assets/img.jpg";
+import img2 from "../../assets/img2.jpg";
+import img3 from "../../assets/img3.jpg";
+import img6 from "../../assets/img6.jpg";
+import img7 from "../../assets/img7.jpg";
 
-import CV from "../../assets/John-Cv.pdf";
 import Info from "./Info";
 
 const About = () => {
   const images = [AboutImg, img1, img7, img3, img2, img6];
   const [currentIndex, setCurrentIndex] = useState(0);
   const intervalId = useRef(null);
+
   const changeImage = (index) => {
     setCurrentIndex(index);
   };
@@ -23,8 +23,9 @@ const About = () => {
       const nextIndex = (currentIndex + 1) % images.length;
       changeImage(nextIndex);
     }, 3000);
+
     return () => clearInterval(intervalId.current);
-  }, [currentIndex]);
+  }, [currentIndex, images.length]);
 
   const handleClick = (index) => {
     clearInterval(intervalId.current);
@@ -34,6 +35,7 @@ const About = () => {
       changeImage(nextIndex);
     }, 3000);
   };
+
   return (
     <section className="about section" id="about">
       <h2 className="section_title">About Me</h2>
@@ -68,7 +70,7 @@ const About = () => {
           <a href="#contact" className="button button--flex">
             Say Hello
             <svg
-              class="button__icon"
+              className="button__icon"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
