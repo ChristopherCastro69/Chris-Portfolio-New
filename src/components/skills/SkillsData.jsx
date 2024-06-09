@@ -40,7 +40,7 @@ const skillsData = {
     title: "Tools and Technologies",
     skills: [
       {
-        name: "Android Studio (Java/Kotlin)",
+        name: "Android Studio",
         level: "Advanced",
         percentage: 90,
       },
@@ -50,7 +50,7 @@ const skillsData = {
       { name: "Git", level: "Advanced", percentage: 80 },
       { name: "Firebase", level: "Advanced", percentage: 80 },
 
-      { name: "Google Colab", level: "Advanced", percentage: 80 },
+      { name: "Photoshop", level: "Advanced", percentage: 80 },
 
       { name: "Streamlit", level: "Intermediate", percentage: 70 },
     ],

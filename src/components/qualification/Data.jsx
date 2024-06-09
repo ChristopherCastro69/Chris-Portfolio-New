@@ -6,11 +6,6 @@ import django from "./../../assets/certificates/Django.jpg";
 import hacktoberfest from "./../../assets/certificates/hacktoberfest.jpg";
 import dohe from "./../../assets/certificates/dohe.jpg";
 
-import img2 from "../../assets/img2.jpg";
-import img3 from "../../assets/img3.jpg";
-import img6 from "./../../assets/img6.jpg";
-import aws from "./../../assets/img7.jpg";
-
 export const educationData = [
   {
     id: 1,

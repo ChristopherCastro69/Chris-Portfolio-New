@@ -14,12 +14,12 @@ const SkillsSection = ({ title, skills }) => {
               <i className="bx bx-badge-check"></i>
               <div>
                 <h3 className="skills_name">{skill.name}</h3>
-                <div className="skills_bar">
+                {/* <div className="skills_bar">
                   <div
                     className="skills_percentage"
                     style={{ width: `${skill.percentage}%` }}
                   ></div>
-                </div>
+                </div> */}
                 {/* <span className="skills_level">{skill.level}</span> */}
               </div>
             </div>

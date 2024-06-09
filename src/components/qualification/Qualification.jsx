@@ -10,45 +10,6 @@ const Qualification = () => {
     setToggleState(index);
   };
 
-  const renderQualification = (data, index) => (
-    <div className="qualification_data" key={index}>
-      {index % 2 === 0 ? (
-        <>
-          <div>
-            <h1>{data.id}</h1>
-            <h3 className="qualification_title">{data.title}</h3>
-            <span className="qualification_subtitle">{data.subtitle}</span>
-            <div className="qualification_calendar">
-              <i className="uil uil-calendar-alt"></i>
-              {data.calendar}
-            </div>
-          </div>
-          <div>
-            <span className="qualification_rounder"></span>
-            <div className="qualification_line"></div>
-          </div>
-        </>
-      ) : (
-        <>
-          <div></div>
-          <div>
-            <span className="qualification_rounder"></span>
-            <span className="qualification_line"></span>
-          </div>
-          <div>
-            <h1>{data.id}</h1>
-            <h3 className="qualification_title">{data.title}</h3>
-            <span className="qualification_subtitle">{data.subtitle}</span>
-            <div className="qualification_calendar">
-              <i className="uil uil-calendar-alt"></i>
-              {data.calendar}
-            </div>
-          </div>
-        </>
-      )}
-    </div>
-  );
-
   return (
     <section className="qualification section" id="qualifications">
       <h2 className="section_title">Qualification</h2>
