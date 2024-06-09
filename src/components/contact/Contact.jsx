@@ -52,7 +52,7 @@ const Contact = () => {
                 href="mailto:christophercastro697@gmail.com"
                 className="contact_button"
               >
-                Write me{" "}
+                Email me{" "}
                 <i className="bx bx-right-arrow-alt contact_button-icon"></i>
               </a>
             </div>
@@ -65,7 +65,7 @@ const Contact = () => {
                 href="https://www.facebook.com/messages/t/100004376165597"
                 className="contact_button"
               >
-                Write me{" "}
+                Message me{" "}
                 <i className="bx bx-right-arrow-alt contact_button-icon"></i>
               </a>
             </div>
@@ -78,7 +78,7 @@ const Contact = () => {
                 href="https://api.whatsapp.com/send?phone=09271568737&text=Hello, more information!"
                 className="contact_button"
               >
-                Write me{" "}
+                Text me{" "}
                 <i className="bx bx-right-arrow-alt contact_button-icon"></i>
               </a>
             </div>
@@ -118,13 +118,13 @@ const Contact = () => {
                 cols="30"
                 rows="10"
                 className="contact_form-input"
-                placeholder="Write your question"
+                placeholder="Type your question"
                 required
               ></textarea>
             </div>
 
             <button className="button button--flex">
-              Send Message
+              Submit Question
               <svg
                 className="button__icon"
                 xmlns="http://www.w3.org/2000/svg"

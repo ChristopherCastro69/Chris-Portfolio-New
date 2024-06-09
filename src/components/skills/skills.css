@@ -79,3 +79,37 @@
     font-size: var(--small-font-size);
   }
 }
+
+.skills_data {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.skills_name {
+  font-weight: 500;
+}
+
+.skills_level {
+  font-size: 0.85rem;
+  margin-left: 1rem;
+}
+
+.skills_bar {
+  position: relative;
+  /* width: 100%; */
+  width: 150px;
+  height: 5px;
+  background: #e4e4e4;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.skills_percentage {
+  height: 100%;
+  /* background: #4caf50; */
+  background: var(--title-color-dark);
+  border-radius: 5px;
+  transition: width 0.3s ease;
+}

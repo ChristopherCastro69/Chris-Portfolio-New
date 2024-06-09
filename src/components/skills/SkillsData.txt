@@ -1,0 +1,53 @@
+// skillsData.js
+const skillsData = {
+  frontend: {
+    title: "Frontend Skills",
+    skills: [
+      { name: "HTML/CSS", level: "Advanced", rating: 9 },
+      { name: "Javascript", level: "Intermediate", rating: 7 },
+      { name: "React", level: "Intermediate", rating: 7 },
+      { name: "Material UI", level: "Intermediate", rating: 7 },
+      { name: "Tailwind", level: "Intermediate", rating: 7 },
+      { name: "Vue.js", level: "Basic", rating: 5 },
+      { name: "Typescript", level: "Basic", rating: 5 },
+    ],
+  },
+  backend: {
+    title: "Backend Skills",
+    skills: [
+      { name: "Java Springboot", level: "Advanced", rating: 9 },
+      { name: "Node.js", level: "Intermediate", rating: 7 },
+      { name: "MySQL", level: "Intermediate", rating: 7 },
+      { name: "RESTful API Design", level: "Intermediate", rating: 7 },
+      { name: "Railway", level: "Basic", rating: 5 },
+      { name: "Django", level: "Basic", rating: 5 },
+      { name: "MongoDB", level: "Basic", rating: 5 },
+    ],
+  },
+  data: {
+    title: "Data Skills",
+    skills: [
+      { name: "Python", level: "Advanced", rating: 9 },
+      { name: "Jupyter Notebook", level: "Advanced", rating: 9 },
+      { name: "Google Colab", level: "Advanced", rating: 9 },
+      { name: "NumPy", level: "Intermediate", rating: 7 },
+      { name: "Pandas", level: "Intermediate", rating: 7 },
+      { name: "PowerBI", level: "Basic", rating: 5 },
+      { name: "Tensorflow", level: "Basic", rating: 5 },
+    ],
+  },
+  tools: {
+    title: "Tools and Technologies",
+    skills: [
+      { name: "Android Studio (Java/Kotlin)", level: "Advanced", rating: 9 },
+      { name: "Git", level: "Advanced", rating: 9 },
+      { name: "Firebase", level: "Advanced", rating: 9 },
+      { name: "Google Colab", level: "Advanced", rating: 9 },
+      { name: "VS Code", level: "Advanced", rating: 9 },
+      { name: "Postman", level: "Advanced", rating: 9 },
+      { name: "Streamlit", level: "Intermediate", rating: 7 },
+    ],
+  },
+};
+
+export default skillsData;

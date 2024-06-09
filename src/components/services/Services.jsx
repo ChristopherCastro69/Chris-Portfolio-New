@@ -25,10 +25,10 @@ const Services = () => {
           </div>
 
           <span className="services_button">
-            I focus on app development as it allows me to combine my creativity
-            and technical expertise. This unique blend helps me craft digital
-            solutions that have a tangible impact on businesses and individuals
-            worldwide, making a meaningful difference.
+            I love creating mobile apps that blend creativity and technical
+            skills to solve real-world problems. Making technology accessible
+            and impactful for users is incredibly fulfilling and drives my
+            passion for development.
             {/* <i className="uil uil-arrow-right services_button-icon"></i> */}
           </span>
         </div>
@@ -45,10 +45,9 @@ const Services = () => {
           </div>
 
           <span className="services_button">
-            With the growing importance of big data, I pursued data science and
-            analytics to drive informed decision-making and address complex
-            problems. By uncovering valuable patterns and insights deeply
-            embedded in data, I aim to make impactful, data-driven solutions.
+            I enjoy exploring numbers and uncovering patterns. Data science lets
+            me make a difference for individuals and businesses by transforming
+            complex data into valuable insights that inform decisions.
           </span>
         </div>
 
@@ -63,11 +62,9 @@ const Services = () => {
           </div>
 
           <span className="services_button">
-            I engage in full-stack development to leverage my technical
-            expertise, creativity, and problem-solving skills. By working on
-            both frontend and backend, I create seamless, efficient, and
-            user-friendly digital solutions that make technology more accessible
-            and impactful.
+            I love combining my artistic side with technical expertise to create
+            seamless, user-friendly digital experiences. Full-stack development
+            allows me to ensure everything runs smoothly and looks great.
           </span>
         </div>
       </div>
