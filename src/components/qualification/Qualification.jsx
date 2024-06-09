@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { educationData, experienceData } from "./Data";
 import "./qualification.css";
+import QualificationItem from "./QualificationItem";
 
 const Qualification = () => {
-  const [toggleState, setToggleState] = useState(1);
+  const [toggleState, setToggleState] = useState(2);
 
   const toggleTab = (index) => {
     setToggleState(index);
@@ -14,6 +15,7 @@ const Qualification = () => {
       {index % 2 === 0 ? (
         <>
           <div>
+            <h1>{data.id}</h1>
             <h3 className="qualification_title">{data.title}</h3>
             <span className="qualification_subtitle">{data.subtitle}</span>
             <div className="qualification_calendar">
@@ -34,6 +36,7 @@ const Qualification = () => {
             <span className="qualification_line"></span>
           </div>
           <div>
+            <h1>{data.id}</h1>
             <h3 className="qualification_title">{data.title}</h3>
             <span className="qualification_subtitle">{data.subtitle}</span>
             <div className="qualification_calendar">
@@ -86,9 +89,9 @@ const Qualification = () => {
                 : "qualification_content"
             }
           >
-            {educationData.map((item, index) =>
-              renderQualification(item, index)
-            )}
+            {educationData.map((item, index) => (
+              <QualificationItem data={item} index={index} key={index} />
+            ))}
           </div>
 
           <div
@@ -98,9 +101,9 @@ const Qualification = () => {
                 : "qualification_content"
             }
           >
-            {experienceData.map((item, index) =>
-              renderQualification(item, index)
-            )}
+            {experienceData.map((item, index) => (
+              <QualificationItem data={item} index={index} key={index} />
+            ))}
           </div>
         </div>
       </div>
