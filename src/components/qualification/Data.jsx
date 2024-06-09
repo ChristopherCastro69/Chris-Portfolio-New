@@ -1,5 +1,9 @@
 // Data.jsx
-import javascript from "./../../assets/HeartAlert.jpg";
+import javascript from "./../../assets/certificates/JS.png";
+import python from "./../../assets/certificates/Python.png";
+import BI from "./../../assets/certificates/BI.png";
+import data from "./../../assets/certificates/DataOff.png";
+
 import workshop from "../../assets/img.jpg";
 import aws2 from "./../../assets/certificates/AWS.png";
 import django from "./../../assets/certificates/Django.jpg";
@@ -13,14 +17,14 @@ export const educationData = [
     subtitle: "Cebu Institute of Technology",
     calendar: "2021 - Present",
     services: ["Web Development", "Algorithms", "Database Management"],
-    image: javascript,
+    image: "",
     type: "ed",
   },
   {
     id: 2,
-    title: "The Complete JavaScript Course 2024: From Zero to Expert!",
+    title: "The Complete JavaScript Course 2023: From Zero to Expert!",
     subtitle: "Udemy",
-    calendar: "2023 - 2024",
+    calendar: "2022 - 2023",
     services: ["Web Development", "Algorithms", "Database Management"],
     image: javascript,
     type: "ed",
@@ -31,7 +35,7 @@ export const educationData = [
     subtitle: "Udemy",
     calendar: "2023 - 2024",
     services: ["Web Development", "Algorithms", "Database Management"],
-    image: javascript,
+    image: python,
     type: "ed",
   },
   {
@@ -40,16 +44,16 @@ export const educationData = [
     subtitle: "Udemy",
     calendar: "2022 - 2024",
     services: ["Web Development", "Algorithms", "Database Management"],
-    image: javascript,
+    image: data,
     type: "ed",
   },
   {
     id: 5,
-    title: "The Business Intelligence Analyst Course 2024",
+    title: "The Business Intelligence Analyst Course 2023",
     subtitle: "Udemy",
-    calendar: "2022 - 2024",
+    calendar: "2022 - 2023",
     services: ["Web Development", "Algorithms", "Database Management"],
-    image: javascript,
+    image: BI,
     type: "ed",
   },
 ];
