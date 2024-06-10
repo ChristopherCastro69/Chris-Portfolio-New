@@ -34,25 +34,24 @@ const skillsData = {
       { name: "Pandas", level: "Intermediate", percentage: 70 },
       { name: "PowerBI", level: "Basic", percentage: 50 },
       { name: "Tensorflow", level: "Basic", percentage: 50 },
+      { name: "Streamlit", level: "Intermediate", percentage: 70 },
     ],
   },
   tools: {
-    title: "Tools and Technologies",
+    title: "Other Tools and Languages",
     skills: [
       {
         name: "Android Studio",
         level: "Advanced",
         percentage: 90,
       },
-
+      { name: "Java", level: "Advanced", percentage: 80 },
+      { name: "C#", level: "Advanced", percentage: 80 },
+      { name: "C/C++", level: "Advanced", percentage: 80 },
       { name: "VS Code", level: "Advanced", percentage: 90 },
       { name: "Postman", level: "Advanced", percentage: 90 },
       { name: "Git", level: "Advanced", percentage: 80 },
       { name: "Firebase", level: "Advanced", percentage: 80 },
-
-      { name: "Photoshop", level: "Advanced", percentage: 80 },
-
-      { name: "Streamlit", level: "Intermediate", percentage: 70 },
     ],
   },
 };
