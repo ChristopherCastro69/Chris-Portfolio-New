@@ -82,12 +82,9 @@ export const projectsNav = [
     name: "all",
   },
   {
-    name: "web",
+    name: "Projects",
   },
   {
-    name: "app",
-  },
-  {
-    name: "data",
+    name: "Contributions",
   },
 ];

@@ -1,7 +1,8 @@
 .services_container {
-  grid-template-columns: repeat(3, 270px);
-  justify-content: center;
-  column-gap: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1.8rem;
 }
 .section_subtitle {
   margin-bottom: var(--mb-2);

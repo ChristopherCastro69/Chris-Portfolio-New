@@ -13,12 +13,12 @@ const Social = () => {
       </a>
 
       <a
-        href="https://www.facebook.com/topitops05?mibextid=ZbWKwL"
+        href="https://medium.com/@christophercastro690"
         className="home_social-icon"
         target="_blank"
         rel="noreferrer"
       >
-        <i className="uil uil-facebook-f"></i>
+        <i class="uil uil-medium-m"></i>
       </a>
 
       <a
@@ -29,6 +29,7 @@ const Social = () => {
       >
         <i className="uil uil-linkedin-alt"></i>
       </a>
+      
     </div>
   );
 };

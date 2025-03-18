@@ -3,11 +3,15 @@ const skillsData = {
   frontend: {
     title: "Frontend Skills",
     skills: [
-      { name: "HTML/CSS", level: "Advanced", percentage: 87.5 },
+      { name: "Angular ", level: "Advanced", percentage: 87.5 },
       { name: "Javascript", level: "Intermediate", percentage: 78 },
-      { name: "React", level: "Intermediate", percentage: 75 },
-      { name: "Material UI", level: "Intermediate", percentage: 69 },
-      { name: "Tailwind", level: "Intermediate", percentage: 65 },
+      { name: "React & Next.js", level: "Intermediate", percentage: 75 },
+      {
+        name: "Material UI",
+        level: "Intermediate",
+        percentage: 69,
+      },
+      { name: "Tailwind CSS", level: "Intermediate", percentage: 65 },
       { name: "Vue.js", level: "Basic", percentage: 55 },
       { name: "Typescript", level: "Basic", percentage: 50 },
     ],
@@ -15,13 +19,22 @@ const skillsData = {
   backend: {
     title: "Backend Skills",
     skills: [
+      {
+        name: "ASP.NET Core",
+        level: "Basic",
+        percentage: 50,
+      },
+
       { name: "Java Springboot", level: "Advanced", percentage: 90 },
       { name: "Node.js", level: "Intermediate", percentage: 89 },
-      { name: "RESTful API Design", level: "Intermediate", percentage: 70 },
+      {
+        name: "Entity Framework Core",
+        level: "Intermediate",
+        percentage: 70,
+      },
       { name: "MySQL", level: "Intermediate", percentage: 70 },
-      { name: "Railway", level: "Basic", percentage: 65 },
+      { name: "PostgreSQL ", level: "Basic", percentage: 65 },
       { name: "Django", level: "Basic", percentage: 60 },
-      { name: "MongoDB", level: "Basic", percentage: 50 },
     ],
   },
   data: {
@@ -39,19 +52,21 @@ const skillsData = {
   },
   tools: {
     title: "Other Tools and Languages",
+
     skills: [
+      { name: "C#", level: "Advanced", percentage: 80 },
+      { name: "Java", level: "Advanced", percentage: 80 },
+
       {
         name: "Android Studio",
         level: "Advanced",
         percentage: 90,
       },
-      { name: "Java", level: "Advanced", percentage: 80 },
-      { name: "C#", level: "Advanced", percentage: 80 },
       { name: "C/C++", level: "Advanced", percentage: 80 },
       { name: "VS Code", level: "Advanced", percentage: 90 },
       { name: "Postman", level: "Advanced", percentage: 90 },
       { name: "Git", level: "Advanced", percentage: 80 },
-      { name: "Firebase", level: "Advanced", percentage: 80 },
+      { name: "Supabase", level: "Advanced", percentage: 80 },
     ],
   },
 };
