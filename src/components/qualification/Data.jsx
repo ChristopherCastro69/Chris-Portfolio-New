@@ -3,55 +3,84 @@ import javascript from "./../../assets/certificates/JS.png";
 import python from "./../../assets/certificates/Python.png";
 import BI from "./../../assets/certificates/BI.png";
 import data from "./../../assets/certificates/DataOff.png";
+import web from "./../../assets/certificates/web.jpg";
+import Angular from "./../../assets/certificates/angular.jpg";
 
-import workshop from "../../assets/img.jpg";
-import aws2 from "./../../assets/certificates/AWS.png";
-import django from "./../../assets/certificates/Django.jpg";
-import hacktoberfest from "./../../assets/certificates/hacktoberfest.jpg";
-import dohe from "./../../assets/certificates/dohe.jpg";
+//Exp
+import hacktoberfest from "./../../assets/certificates/hacktoberfest1.jpg";
+import Symph from "./../../assets/certificates/SymphCert.jpg";
+import AI from "./../../assets/certificates/AI-Pilipinas.jpg";
+import GDG from "./../../assets/certificates/GDG.png";
 
 export const educationData = [
   {
     id: 1,
     title: "Computer Science",
     subtitle: "Cebu Institute of Technology",
-    calendar: "2021 - Present",
+    calendar: "May 2025",
     services: ["Web Development", "Algorithms", "Database Management"],
     image: "",
     type: "ed",
   },
   {
     id: 2,
+    title: "The Complete 2024 Web Development Bootcamp",
+    subtitle: "Udemy",
+    calendar: "December 18, 2024",
+    services: ["Web Development", "Algorithms", "Database Management"],
+    image: web,
+    type: "ed",
+  },
+  {
+    id: 3,
+    title: "Angular - The Complete Guide (2025) Edition",
+    subtitle: "Udemy",
+    calendar: "Febraury 9, 2025",
+    services: ["Web Development", "Algorithms", "Database Management"],
+    image: Angular,
+    type: "ed",
+  },
+  {
+    id: 4,
     title: "The Complete JavaScript Course 2023: From Zero to Expert!",
     subtitle: "Udemy",
-    calendar: "2022 - 2023",
+    calendar: "December 25, 2023",
     services: ["Web Development", "Algorithms", "Database Management"],
     image: javascript,
     type: "ed",
   },
   {
-    id: 3,
+    id: 5,
     title: "The Complete Python Bootcamp From Zero to Hero in Python",
     subtitle: "Udemy",
-    calendar: "2023 - 2024",
+    calendar: "January 10, 2024",
     services: ["Web Development", "Algorithms", "Database Management"],
     image: python,
     type: "ed",
   },
   {
-    id: 4,
+    id: 6,
     title: "Python for Data Science and Machine Learning Bootcamp",
     subtitle: "Udemy",
-    calendar: "2022 - 2024",
+    calendar: "May 25, 2024",
     services: ["Web Development", "Algorithms", "Database Management"],
     image: data,
     type: "ed",
   },
   {
-    id: 5,
+    id: 7,
     title: "The Business Intelligence Analyst Course 2023",
     subtitle: "Udemy",
-    calendar: "2022 - 2023",
+    calendar: "August 1, 2023",
+    services: ["Web Development", "Algorithms", "Database Management"],
+    image: BI,
+    type: "ed",
+  },
+  {
+    id: 8,
+    title: "Git Complete: The definitive, step-by-step guide to Git",
+    subtitle: "Udemy",
+    calendar: "January 21, 2025",
     services: ["Web Development", "Algorithms", "Database Management"],
     image: BI,
     type: "ed",
@@ -61,66 +90,53 @@ export const educationData = [
 export const experienceData = [
   {
     id: 1,
-    title: "VIP Escort Volunteer",
-    subtitle: "AWS Community Day - Cebu Roadshow",
-    calendar: " August 26, 2023",
+    title: "Software Engineer Intern ",
+    subtitle: "Symph",
+    calendar: " July 2024 - November 2024",
     services: [
-      "Acted as a VIP escort at the AWS Community Day event, providing personalized assistance to high-level technical speakers from the Philippines.",
+      "Developed frontend and database solutions for theonehourproject.app, directly collaborating with clients to deliver high-quality, production-ready software in a fast-paced 1-month sprint.",
 
-      "Ensured seamless experiences for VIP speakers through effective communication, resulting in high satisfaction rates.",
+      "Enhanced AI-driven UX for the GOAB Photobooth Kiosk, implementing prompt engineering to create an interactive face-swap experience used at Geeks on a Beach 2024 and DevFest 2024, impressing investors and developers.",
     ],
-    image: aws2,
+    image: Symph,
     type: "exp",
   },
   {
     id: 2,
-    title: "Open-Source Contributor and Volunteer",
-    subtitle: "Javascript Cebu’s Hacktoberfest",
-    calendar: " October 28, 2023",
+    title: "AI & Machine Learning Advocate",
+    subtitle: "AI Pilipinas Cebu",
+    calendar: " August 2024 - January 2025",
     services: [
-      "Implemented UI enhancements for React Cebu’s community website, improving layout and user experience.",
-      "Resolved issues to prevent redirection when a specific button is clicked, enhancing usability.",
+      "Authored AI/ML blogs focusing on real-world applications in healthcare and business, showcasing technical expertise and industry relevance.",
+      "Designed and deployed AI-powered web applications, demonstrating the practical impact of AI in solving real-world problems.",
+    ],
+    image: AI,
+    type: "exp",
+  },
+  {
+    id: 3,
+    title: "Best Overall Open Source Contributor",
+    subtitle: "Cebu Hacktoberfest 2024",
+    calendar: "October 2024",
+    services: [
+      "Awarded Best Overall Contributor for significant open-source contributions, improving deployment processes and user experience for tech community platforms, including PizzaPy Cebu and Cebby (JavaScript Cebu Community).",
+
+      "Delivered impactful feature enhancements and bug fixes, showcasing strong problem-solving and collaboration in open-source environments.",
     ],
     image: hacktoberfest,
     type: "exp",
   },
   {
-    id: 3,
-    title: "Technical and Crowd Control Volunteer",
-    subtitle: "PizzaPy Cebu Python Users Group",
-    calendar: " February 17, 2024",
-    services: [
-      "Led a group of volunteers at the Django Pizza Py community event, overseeing technical assistance and support for Python enthusiasts focusing on the Django framework and Python programming.",
-
-      "Played a role in the overall success of the Django Pizza Py community event. Promoting collaboration and knowledge sharing within the Python community",
-    ],
-    image: django,
-    type: "exp",
-  },
-  {
     id: 4,
-    title: "Technical Query Assistant",
-    subtitle: "Javascript Cebu's Automated Testing Workshop",
-    calendar: " May 04, 2024",
+    title: "Programs & Speakers Lead",
+    subtitle: "Google Developer Group Cebu",
+    calendar: " September 2024 - Present",
     services: [
-      "Guided participants through practical exercises and discussions on effective testing strategies using Javascript, Node, Playwright, TypeScript, Vite, and React.",
+      "Spearheaded DevFest 2024, leading speaker coordination and program management, ensuring a seamless experience for hundreds of attendees and AI experts.",
 
-      "Directed a team of volunteers, ensuring the success of the Javascript Cebu community event. Fostered collaboration and knowledge sharing within the JavaScript community.",
+      "Developed an automated certificate distribution system, significantly reducing manual work and enhancing participant satisfaction.",
     ],
-    image: workshop,
-    type: "exp",
-  },
-  {
-    id: 5,
-    title: "Core Operations Volunteer at All Aboard Startup Cebu Mixer",
-    subtitle: "DOHE Philippines",
-    calendar: " May 21, 2024",
-    services: [
-      "Facilitated the smooth operation of DOHE's monthly startup events, ensuring seamless transitions and efficient logistics management.",
-      "Documented key activities and processes to maintain accurate records and streamline future event planning.",
-      "Provided technical support and assistance during the events, contributing to their overall success.",
-    ],
-    image: dohe,
+    image: GDG,
     type: "exp",
   },
 ];
