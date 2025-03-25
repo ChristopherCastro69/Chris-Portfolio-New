@@ -4,13 +4,15 @@ import AboutImg from "../../assets/about.jpg";
 import img1 from "../../assets/img.jpg";
 import img2 from "../../assets/img2.jpg";
 import img3 from "../../assets/img3.jpg";
+import img5 from "../../assets/img5.jpg";
+
 import img6 from "../../assets/img6.jpg";
 import img7 from "../../assets/img7.jpg";
 
 import Info from "./Info";
 
 const About = () => {
-  const images = [AboutImg, img1, img7, img3, img2, img6];
+  const images = [AboutImg, img1, img5, img7, img6, img2, img3];
   const [currentIndex, setCurrentIndex] = useState(0);
   const intervalId = useRef(null);
 
@@ -59,13 +61,15 @@ const About = () => {
         <div className="about_data">
           <Info />
           <p className="about_description">
-            Greetings! I'm Christopher, a passionate Full Stack Web Developer
-            and AI enthusiast with experience in Data Analytics, Data Science,
-            and Web Development. Starting with C programming, I've grown into
-            creating impactful projects and actively volunteering at tech
-            events. My unique blend of technical expertise, creativity, and
-            dedication ensures I deliver quality, user-friendly digital
-            experiences that add value to your organization.
+            Greetings! I'm Christopher, a Full Stack Web Developer and AI
+            enthusiast dedicated to building scalable web solutions and
+            leveraging AI for real-world impact. I specialize in automating
+            workflows, optimizing systems, and enhancing decision-making through
+            AI and software development. My contributions to open-source
+            projects, tech events, and community-driven initiatives reflect my
+            commitment to innovation. With expertise in efficient backend
+            systems and intelligent automation, I deliver solutions that drive
+            business growth, improve efficiency, and create lasting value.
           </p>
           <a href="#contact" className="button button--flex">
             Say Hello
