@@ -5,6 +5,7 @@ import PizzaPy from "../../assets/projects/PizzaPy.png";
 import AutoCert from "../../assets/projects/AutoCert.png";
 import TOHP from "../../assets/projects/tohp.png";
 import Cebby from "../../assets/projects/cebby.png";
+import useClass from "../../assets/projects/useClass.png";
 
 //========== PORTFOLIO DATA ==========
 export const projectsData = [
@@ -44,21 +45,38 @@ export const projectsData = [
   },
   {
     id: 3,
-    image: AutoCert,
-    title: "AutoCert: Certificate Automation",
-    desc: "Automated Certificate Generation & Delivery for Tech Events",
-    lang: "Next.js, TypeScript, Supabase",
-    link: "https://autocert.vercel.app/",
-    repo: "https://github.com/ChristopherCastro69/autocert",
+    image: useClass,
+    title: "useClass: Use Case to Class Diagram Converter",
+    desc: "From User Stories to Object-Oriented Design",
+    lang: "Next.js, Express js, TypeScript, Firebase, ",
+    link: "https://use-class-app-client.onrender.com/home",
+    repo: "https://github.com/ChristopherCastro69/use-class-app",
     category: "Projects",
     services: [
-      "Developed a scalable automation system that streamlined certificate generation and delivery, eliminating manual work and reducing processing time by 80%.",
-
-      "Successfully deployed in GDG Cebu DevFest 2024 and PizzaPy Cebu’s Accenture Python ML 2025, automating certificate distribution for hundreds of participants.",
-
-      "Integrated Next.js, TypeScript, and Supabase to ensure seamless, real-time processing with cloud storage for efficient document management.",
+      "Led frontend development and UX design, resulting in a 95% user satisfaction rating and a 100% task success rate based on usability tests.",
+      "Built and integrated an AI-powered chatbot for real-time diagram conversion, reducing manual conversion time by 85%.",
+      "Directed project management and team coordination across 3 core contributors, ensuring on-time delivery and feature alignment.",
+      "Developed backend CRUD logic and user deployment validation using Express.js and Firebase, enabling a seamless and secure experience.",
+      "Achieved 90% recommendation rate from users, with 80% completing tasks in under one minute—proving significant gains in productivity and learning.",
     ],
   },
+  // {
+  //   id: 3,
+  //   image: AutoCert,
+  //   title: "AutoCert: Certificate Automation",
+  //   desc: "Automated Certificate Generation & Delivery for Tech Events",
+  //   lang: "Next.js, TypeScript, Supabase",
+  //   link: "https://autocert.vercel.app/",
+  //   repo: "https://github.com/ChristopherCastro69/autocert",
+  //   category: "Projects",
+  //   services: [
+  //     "Developed a scalable automation system that streamlined certificate generation and delivery, eliminating manual work and reducing processing time by 80%.",
+
+  //     "Successfully deployed in GDG Cebu DevFest 2024 and PizzaPy Cebu’s Accenture Python ML 2025, automating certificate distribution for hundreds of participants.",
+
+  //     "Integrated Next.js, TypeScript, and Supabase to ensure seamless, real-time processing with cloud storage for efficient document management.",
+  //   ],
+  // },
 
   {
     id: 4,
