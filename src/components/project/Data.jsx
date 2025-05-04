@@ -2,7 +2,6 @@ import App from "../../assets/app.png";
 import HeartAlert from "../../assets/projects/HeartAlert.png";
 import LoanChecker from "../../assets/projects/LoanChecker.png";
 import PizzaPy from "../../assets/projects/PizzaPy.png";
-import AutoCert from "../../assets/projects/AutoCert.png";
 import TOHP from "../../assets/projects/tohp.png";
 import Cebby from "../../assets/projects/cebby.png";
 import useClass from "../../assets/projects/useClass.png";

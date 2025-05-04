@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./about.css";
 import AboutImg from "../../assets/about.jpg";
-import img1 from "../../assets/img.jpg";
+// import img1 from "../../assets/img.jpg";
 import img2 from "../../assets/img2.jpg";
 import img3 from "../../assets/img3.jpg";
 import img5 from "../../assets/img5.jpg";
@@ -9,10 +9,12 @@ import img5 from "../../assets/img5.jpg";
 import img6 from "../../assets/img6.jpg";
 import img7 from "../../assets/img7.jpg";
 
+import img8 from "../../assets/rs.jpg";
+
 import Info from "./Info";
 
 const About = () => {
-  const images = [AboutImg, img1, img5, img7, img6, img2, img3];
+  const images = [AboutImg, img8, img5, img7, img6, img2, img3];
   const [currentIndex, setCurrentIndex] = useState(0);
   const intervalId = useRef(null);
 
@@ -60,8 +62,8 @@ const About = () => {
 
         <div className="about_data">
           <Info />
-          <p className="about_description">
-            Greetings! I'm Christopher, a Full Stack Web Developer and AI
+          <p className="about_description scrollable-box">
+            {/* Greetings! I'm Christopher, a Full Stack Web Developer and AI
             enthusiast dedicated to building scalable web solutions and
             leveraging AI for real-world impact. I specialize in automating
             workflows, optimizing systems, and enhancing decision-making through
@@ -70,6 +72,42 @@ const About = () => {
             commitment to innovation. With expertise in efficient backend
             systems and intelligent automation, I deliver solutions that drive
             business growth, improve efficiency, and create lasting value.
+            <br />
+            <br /> */}
+            <strong>Best Research Paper & Best Research Oral Presenter</strong>{" "}
+            — CIT 14th Research Congress (August 30, 2025): Led a
+            cross-functional team in developing RetinAI, a mobile AI app for
+            early diabetic retinopathy detection using a 3D-printed retinal
+            imaging device and AI classification models.
+            <br />
+            <br />
+            <strong>AI and Machine Learning Advocate</strong> — AI Pilipinas
+            Cebu (Aug 2024 - Jan 2025): Published AI/ML blogs with significant
+            views and reads, showcasing deep technical expertise and industry
+            relevance. Developed AI-powered web applications, demonstrating
+            practical AI impact in solving real-world challenges.
+            <br />
+            <br />
+            <strong>Software Engineer Intern</strong> — Symph (Jul 2024 - Nov
+            2024): Developed frontend and database solutions, collaborating with
+            clients to deliver high-quality, production-ready software.
+            Optimized AI-driven UX for interactive experiences, impressing
+            investors and developers.
+            <br />
+            <br />
+            <strong>Best Overall Open Source Contributor</strong> — Cebu
+            Hacktoberfest 2024: Awarded for improving deployment and user
+            experience in community platforms. Delivered impactful feature
+            enhancements and bug fixes, showcasing strong problem-solving and
+            collaboration.
+            <br />
+            <br />
+            <strong>Programs and Speakers Director</strong> — Google Developer
+            Group Cebu (Sept 2024 - Present): Led event execution, managing
+            program flow and speaker coordination to ensure a seamless,
+            high-impact event.
+            <br />
+            <br />
           </p>
           <a href="#contact" className="button button--flex">
             Say Hello
