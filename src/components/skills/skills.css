@@ -15,7 +15,7 @@
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
   text-align: center;
-  margin-bottom: var(--mb-1-5);
+  margin-bottom: var(--mb-3);
   font-weight: bold;
 }
 
@@ -27,13 +27,16 @@
 
 .skills_group {
   display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: flex-start;
   row-gap: 1.5rem;
+  column-gap: 2.5rem;
 }
 
 .skills_data {
   display: flex;
   column-gap: 0.5rem;
+  display: flex;
 }
 
 .skills .bx-badge-check {
