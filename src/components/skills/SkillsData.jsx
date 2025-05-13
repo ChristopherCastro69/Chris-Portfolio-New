@@ -6,6 +6,7 @@ const skillsData = {
       { name: "Angular ", level: "Advanced", percentage: 87.5 },
       { name: "Javascript", level: "Intermediate", percentage: 78 },
       { name: "React & Next.js", level: "Intermediate", percentage: 75 },
+      { name: "Next.js", level: "Intermediate", percentage: 72 },
       {
         name: "Material UI",
         level: "Intermediate",
@@ -24,7 +25,9 @@ const skillsData = {
         level: "Basic",
         percentage: 50,
       },
-
+      { name: ".NET", level: "Intermediate", percentage: 70 },
+      { name: "Nest.js", level: "Intermediate", percentage: 75 },
+      { name: "PHP", level: "Intermediate", percentage: 68 },
       { name: "Java Springboot", level: "Advanced", percentage: 90 },
       { name: "Node.js", level: "Intermediate", percentage: 89 },
       {
@@ -34,7 +37,7 @@ const skillsData = {
       },
       { name: "MySQL", level: "Intermediate", percentage: 70 },
       { name: "PostgreSQL ", level: "Basic", percentage: 65 },
-      { name: "Django", level: "Basic", percentage: 60 },
+      { name: "Django", level: "Intermediate", percentage: 75 },
     ],
   },
   data: {
@@ -52,11 +55,9 @@ const skillsData = {
   },
   tools: {
     title: "Other Tools and Languages",
-
     skills: [
       { name: "C#", level: "Advanced", percentage: 80 },
       { name: "Java", level: "Advanced", percentage: 80 },
-
       {
         name: "Android Studio",
         level: "Advanced",

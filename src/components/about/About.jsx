@@ -17,7 +17,10 @@ import Info from "./Info";
 const About = () => {
   const images = [CumLaude, img8, img5, img7, img6, img2, img3];
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentSection, setCurrentSection] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
   const intervalId = useRef(null);
+  const sectionIntervalId = useRef(null);
 
   const changeImage = (index) => {
     setCurrentIndex(index);
@@ -32,6 +35,21 @@ const About = () => {
     return () => clearInterval(intervalId.current);
   }, [currentIndex, images.length]);
 
+  useEffect(() => {
+    // Handle section transitions
+    if (!isPaused) {
+      sectionIntervalId.current = setInterval(() => {
+        setCurrentSection((prev) => (prev + 1) % 5); // 5 sections total
+      }, 5000); // Change section every 5 seconds
+    }
+
+    return () => {
+      if (sectionIntervalId.current) {
+        clearInterval(sectionIntervalId.current);
+      }
+    };
+  }, [isPaused]);
+
   const handleClick = (index) => {
     clearInterval(intervalId.current);
     changeImage(index);
@@ -40,6 +58,71 @@ const About = () => {
       changeImage(nextIndex);
     }, 3000);
   };
+
+  const handleMouseEnter = () => {
+    setIsPaused(true);
+    if (sectionIntervalId.current) {
+      clearInterval(sectionIntervalId.current);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setIsPaused(false);
+  };
+
+  const handleSectionClick = () => {
+    setCurrentSection((prev) => (prev + 1) % 5);
+    // Reset the interval when manually clicking
+    if (sectionIntervalId.current) {
+      clearInterval(sectionIntervalId.current);
+    }
+    sectionIntervalId.current = setInterval(() => {
+      setCurrentSection((prev) => (prev + 1) % 5);
+    }, 5000);
+  };
+
+  const sections = [
+    {
+      title: "Best Research Paper & Best Research Oral Presenter",
+      subtitle: "— CIT 14th Research Congress (August 30, 2025)",
+      points: [
+        "Led a cross-functional team in developing RetinAI, a mobile AI app for early diabetic retinopathy detection using a 3D-printed retinal imaging device and AI classification models.",
+        "Developed a mobile AI app for early diabetic retinopathy detection using a 3D-printed retinal imaging device and AI classification models.",
+      ],
+    },
+    {
+      title: "AI and Machine Learning Advocate",
+      subtitle: "— AI Pilipinas Cebu (Aug 2024 - Jan 2025)",
+      points: [
+        "Published AI/ML blogs that garnered 171+ views and 94+ reads, covering real-world applications in healthcare and business, showcasing deep technical expertise and industry relevance.",
+        "Developed and deployed AI-powered web applications, demonstrating practical AI impact in solving real-world challenges, particularly in medical research and predictive analytics.",
+      ],
+    },
+    {
+      title: "Software Engineer Intern",
+      subtitle: "— Symph (Jul 2024 - Nov 2024)",
+      points: [
+        "Developed frontend and database solutions, collaborating with clients to deliver high-quality, production-ready software.",
+        "Optimized AI-driven UX for interactive experiences, impressing investors and developers.",
+      ],
+    },
+    {
+      title: "Best Overall Open Source Contributor",
+      subtitle: "— Cebu Hacktoberfest 2024",
+      points: [
+        "Awarded for improving deployment and user experience in community platforms.",
+        "Delivered impactful feature enhancements and bug fixes, showcasing strong problem-solving and collaboration.",
+      ],
+    },
+    {
+      title: "Programs and Speakers Director",
+      subtitle: "— Google Developer Group Cebu (Sept 2024 - Present)",
+      points: [
+        "Led event execution, managing program flow and speaker coordination to ensure a seamless, high-impact event.",
+        "Orchestrated successful events with 100+ attendees, fostering collaboration and knowledge sharing.",
+      ],
+    },
+  ];
 
   return (
     <section className="about section" id="about">
@@ -63,78 +146,30 @@ const About = () => {
 
         <div className="about_data">
           <Info />
-          <p className="about_description scrollable-box">
-            <strong>Best Research Paper & Best Research Oral Presenter</strong>{" "}
-            <span className="subtitle">
-              — CIT 14th Research Congress (August 30, 2025)
-            </span>
-            <li>
-              Led a cross-functional team in developing RetinAI, a mobile AI app
-              for early diabetic retinopathy detection using a 3D-printed
-              retinal imaging device and AI classification models.
-            </li>
-            <li>
-              Developed a mobile AI app for early diabetic retinopathy detection
-              using a 3D-printed retinal imaging device and AI classification
-              models.
-            </li>
-            <br />
-            <br />
-            <strong>AI and Machine Learning Advocate</strong>{" "}
-            <span className="subtitle">
-              — AI Pilipinas Cebu (Aug 2024 - Jan 2025)
-            </span>
-            <li>
-              Published AI/ML blogs that garnered 171+ views and 94+ reads,
-              covering real-world applications in healthcare and business,
-              showcasing deep technical expertise and industry relevance.
-            </li>
-            <li>
-              Developed and deployed AI-powered web applications, demonstrating
-              practical AI impact in solving real-world challenges, particularly
-              in medical research and predictive analytics.
-            </li>
-            <br />
-            <br />
-            <strong>Software Engineer Intern</strong>{" "}
-            <span className="subtitle">— Symph (Jul 2024 - Nov 2024)</span>
-            <li>
-              Developed frontend and database solutions, collaborating with
-              clients to deliver high-quality, production-ready software.
-            </li>
-            <li>
-              Optimized AI-driven UX for interactive experiences, impressing
-              investors and developers.
-            </li>
-            <br />
-            <br />
-            <strong>Best Overall Open Source Contributor</strong>{" "}
-            <span className="subtitle">— Cebu Hacktoberfest 2024</span>
-            <li>
-              Awarded for improving deployment and user experience in community
-              platforms.
-            </li>
-            <li>
-              Delivered impactful feature enhancements and bug fixes, showcasing
-              strong problem-solving and collaboration.
-            </li>
-            <br />
-            <br />
-            <strong>Programs and Speakers Director</strong>{" "}
-            <span className="subtitle">
-              — Google Developer Group Cebu (Sept 2024 - Present)
-            </span>
-            <li>
-              Led event execution, managing program flow and speaker
-              coordination to ensure a seamless, high-impact event.
-            </li>
-            <li>
-              Orchestrated successful events with 100+ attendees, fostering
-              collaboration and knowledge sharing.
-            </li>
-            <br />
-            <br />
-          </p>
+          <div
+            className="about_description scrollable-box"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            onClick={handleSectionClick}
+            style={{ cursor: "pointer" }}
+          >
+            {sections.map((section, index) => (
+              <div
+                key={index}
+                className={`section-content ${
+                  index === currentSection ? "visible" : "hidden"
+                }`}
+              >
+                <strong>{section.title}</strong>{" "}
+                <span className="subtitle">{section.subtitle}</span>
+                {section.points.map((point, pointIndex) => (
+                  <li key={pointIndex}>{point}</li>
+                ))}
+                <br />
+                <br />
+              </div>
+            ))}
+          </div>
           <a href="#contact" className="button button--flex">
             Say Hello
             <svg
