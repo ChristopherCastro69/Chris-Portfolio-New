@@ -46,8 +46,7 @@ const Services = () => {
             {/* logo */}
             <i className="uil uil-arrow-growth services_icon"></i>
             <h3 className="services_title">
-              Data <br />
-              Science
+              Data Science <br />& Automation
             </h3>
           </div>
 

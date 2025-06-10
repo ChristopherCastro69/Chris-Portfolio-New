@@ -3,7 +3,11 @@ import "./about.css";
 import AboutImg from "../../assets/about.jpg";
 import CumLaude from "../../assets/CumLaude.jpg";
 // import img1 from "../../assets/img.jpg";
-import img2 from "../../assets/img2.jpg";
+// import img2 from "../../assets/img2.jpg";
+// import img2 from "../../assets/img2.jpg";
+import bohol from "../../assets/Bohol.jpg";
+import gdg from "../../assets/gdg.png";
+
 import img3 from "../../assets/img3.jpg";
 import img5 from "../../assets/img5.jpg";
 
@@ -15,7 +19,7 @@ import img8 from "../../assets/rs.jpg";
 import Info from "./Info";
 
 const About = () => {
-  const images = [CumLaude, img8, img5, img7, img6, img2, img3];
+  const images = [CumLaude, bohol, img8, img7, img6, bohol, gdg];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentSection, setCurrentSection] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -39,7 +43,7 @@ const About = () => {
     // Handle section transitions
     if (!isPaused) {
       sectionIntervalId.current = setInterval(() => {
-        setCurrentSection((prev) => (prev + 1) % 5); // 5 sections total
+        setCurrentSection((prev) => (prev + 1) % 6); // 5 sections total
       }, 5000); // Change section every 5 seconds
     }
 
@@ -78,13 +82,13 @@ const About = () => {
     }
     sectionIntervalId.current = setInterval(() => {
       setCurrentSection((prev) => (prev + 1) % 5);
-    }, 5000);
+    }, 10000);
   };
 
   const sections = [
     {
       title: "Best Research Paper & Best Research Oral Presenter",
-      subtitle: "— CIT 14th Research Congress (August 30, 2025)",
+      subtitle: "— CIT 14th Research Congress (April 30, 2025)",
       points: [
         "Led a cross-functional team in developing RetinAI, a mobile AI app for early diabetic retinopathy detection using a 3D-printed retinal imaging device and AI classification models.",
         "Developed a mobile AI app for early diabetic retinopathy detection using a 3D-printed retinal imaging device and AI classification models.",
@@ -99,11 +103,30 @@ const About = () => {
       ],
     },
     {
+      title: "Best Research Paper (1st Place)",
+      subtitle:
+        "—Central Visayas Health Research and Innovation Congress (May 31, 2025)",
+      points: [
+        "Led a cross-functional team in developing RetinAI, a mobile AI app for early diabetic retinopathy detection using a 3D-printed retinal imaging device and AI classification models.",
+        "Competed against 100+ participants from different prominent universities across Central Visayas and institutions from renowned tertiary hospitals in Cebu.",
+      ],
+    },
+
+    {
       title: "Software Engineer Intern",
-      subtitle: "— Symph (Jul 2024 - Nov 2024)",
+      subtitle: "Symph (Jul 2024 - Nov 2024)",
       points: [
         "Developed frontend and database solutions, collaborating with clients to deliver high-quality, production-ready software.",
-        "Optimized AI-driven UX for interactive experiences, impressing investors and developers.",
+        "Worked in an Agile Scrum environment, completing weekly sprints and participating in stand-ups and client reviews to ensure timely delivery.",
+      ],
+    },
+
+    {
+      title: "Programs and Speakers Director",
+      subtitle: "— Google Developer Group Cebu (Sept 2024 - Present)",
+      points: [
+        "Led event execution, managing program flow and speaker coordination to ensure a seamless, high-impact event.",
+        "Orchestrated successful events with 300+ attendees, fostering collaboration and knowledge sharing including Google Cloud Platform, AI, and Machine Learning.",
       ],
     },
     {
@@ -112,14 +135,6 @@ const About = () => {
       points: [
         "Awarded for improving deployment and user experience in community platforms.",
         "Delivered impactful feature enhancements and bug fixes, showcasing strong problem-solving and collaboration.",
-      ],
-    },
-    {
-      title: "Programs and Speakers Director",
-      subtitle: "— Google Developer Group Cebu (Sept 2024 - Present)",
-      points: [
-        "Led event execution, managing program flow and speaker coordination to ensure a seamless, high-impact event.",
-        "Orchestrated successful events with 100+ attendees, fostering collaboration and knowledge sharing.",
       ],
     },
   ];
