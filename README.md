@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# Chris Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A personal portfolio monorepo with React frontend and Python FastAPI backend (with future RAG capabilities).
 
-## Available Scripts
+## Project Structure
 
-In the project directory, you can run:
+```
+chris-portfolio/
+  packages/
+    frontend/          # React TypeScript application
+    backend/           # Python FastAPI backend (placeholder)
+    shared/            # Shared types and schemas
+  docker-compose.yml   # Container orchestration
+  package.json         # Root workspace configuration
+```
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Node.js >= 18.0.0
+- npm or pnpm
+- Python 3.10+ (for backend, when ready)
 
-### `npm test`
+### Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+# Install dependencies for all packages
+npm install
 
-### `npm run build`
+# Or with pnpm
+pnpm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Development
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+# Run frontend only
+npm run dev:frontend
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Run backend only (requires Python setup)
+npm run dev:backend
 
-### `npm run eject`
+# Run both (requires concurrently)
+npm run dev
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Building
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+# Build frontend for production
+npm run build:frontend
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Packages
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Frontend (`packages/frontend`)
 
-## Learn More
+React 18 portfolio website with TypeScript. Features:
+- Responsive design (mobile-first)
+- Component-based architecture
+- Data service layer for API integration
+- Custom hooks for reusable logic
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Backend (`packages/backend`)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Python FastAPI backend (placeholder). Planned features:
+- RESTful API endpoints
+- RAG-based portfolio Q&A
+- Vector database integration
+- Contact form handling
 
-### Code Splitting
+### Shared (`packages/shared`)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Shared types and JSON schemas for data validation across packages.
 
-### Analyzing the Bundle Size
+## Environment Variables
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+See `packages/frontend/.env.example` for frontend configuration.
 
-### Making a Progressive Web App
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+MIT
