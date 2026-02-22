@@ -1,6 +1,10 @@
 import { NextResponse } from 'next/server';
 import { buildSystemPrompt } from '../../../data/resume';
 import { getSupabase } from '../../../lib/supabase';
+import { rateLimit } from '../../../lib/rateLimit';
+
+const RATE_LIMIT_CONFIG = { maxRequests: 10, windowMs: 60_000 };
+const MAX_MESSAGE_LENGTH = 500;
 
 function logChatMessages(visitorId: string, userContent: string, assistantContent: string) {
   getSupabase()
@@ -72,11 +76,30 @@ function storeMemory(messages: { role: string; content: string }[], userId: stri
 
 export async function POST(request: Request) {
   try {
+    const forwarded = request.headers.get('x-forwarded-for');
+    const ip = forwarded ? forwarded.split(',')[0].trim() : 'unknown';
+
+    const { allowed, resetTime } = rateLimit(ip, RATE_LIMIT_CONFIG);
+    if (!allowed) {
+      const retryAfter = Math.ceil((resetTime - Date.now()) / 1000);
+      return NextResponse.json(
+        { error: 'Too many requests. Please try again shortly.' },
+        { status: 429, headers: { 'Retry-After': String(retryAfter) } }
+      );
+    }
+
     const { message, userId } = await request.json();
 
     if (!message || typeof message !== 'string') {
       return NextResponse.json(
         { error: 'Message is required.' },
+        { status: 400 }
+      );
+    }
+
+    if (message.length > MAX_MESSAGE_LENGTH) {
+      return NextResponse.json(
+        { error: `Message must be ${MAX_MESSAGE_LENGTH} characters or fewer.` },
         { status: 400 }
       );
     }
