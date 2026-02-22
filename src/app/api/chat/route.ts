@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { buildSystemPrompt } from '../../../data/resume-text';
+import { buildSystemPrompt } from '../../../data/resume';
 
 const SYSTEM_PROMPT = buildSystemPrompt();
 

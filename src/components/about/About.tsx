@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 import { DATA } from "../../data/resume";
-import { imgSrc } from "../../data/types";
 import Info from "./Info";
 
 const About: React.FC = () => {
@@ -84,7 +83,7 @@ const About: React.FC = () => {
           {images.map((img, index) => (
             <img
               key={index}
-              src={imgSrc(img)}
+              src={img}
               alt=""
               className={`about_img ${
                 index === currentIndex ? "visible" : "hidden"

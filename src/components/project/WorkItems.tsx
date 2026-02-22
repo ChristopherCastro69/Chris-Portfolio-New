@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import { imgSrc, type ImageSrc } from "../../data/types";
-
 interface ProjectItem {
   id: number;
-  image: ImageSrc;
+  image: string;
   title: string;
   desc: string;
   lang: string;
@@ -26,7 +24,7 @@ const WorksItems: React.FC<WorksItemsProps> = ({ item }) => {
   return (
     <div className="work_card" key={item.id}>
       <div className="work_img-link">
-        <img src={imgSrc(item.image)} alt={item.title} className="work_img" />
+        <img src={item.image} alt={item.title} className="work_img" />
       </div>
       <h3 className="work_title">{item.title}</h3>
       <span className="work_desc">{item.desc}</span>

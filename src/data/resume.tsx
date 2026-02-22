@@ -5,43 +5,6 @@
 
 import type { ResumeData } from './types';
 
-// ─── About Images ───
-import CumLaude from '../assets/CumLaude.jpg';
-import Bohol from '../assets/Bohol.jpg';
-import rs from '../assets/rs.jpg';
-import img7 from '../assets/img7.jpg';
-import img6 from '../assets/img6.jpg';
-import gdg from '../assets/gdg.png';
-
-// ─── Project Images ───
-import LoanChecker from '../assets/projects/LoanChecker.png';
-import PizzaPy from '../assets/projects/PizzaPy.png';
-import useClassImg from '../assets/projects/useClass.png';
-import tohp from '../assets/projects/tohp.png';
-import HeartAlert from '../assets/projects/HeartAlert.png';
-import cebby from '../assets/projects/cebby.png';
-import appImg from '../assets/app.png';
-
-// ─── Certificate Images ───
-import certWeb from '../assets/certificates/web.jpg';
-import certAngular from '../assets/certificates/angular.jpg';
-import certJS from '../assets/certificates/JS.png';
-import certPython from '../assets/certificates/Python.png';
-import certDataOff from '../assets/certificates/DataOff.png';
-import certBI from '../assets/certificates/BI.png';
-import certSymph from '../assets/certificates/SymphCert.jpg';
-import certAI from '../assets/certificates/AI-Pilipinas.jpg';
-import certHacktoberfest from '../assets/certificates/hacktoberfest1.jpg';
-import certGDG from '../assets/certificates/GDG.png';
-
-// ─── Testimonial Images ───
-import testimonial1 from '../assets/testimonial1.png';
-import testimonial2 from '../assets/testimonial2.png';
-import testimonial3 from '../assets/testimonial3.png';
-
-// ─── Resume PDF (served from /public) ───
-const resumePDF = '/Christopher-Resume.pdf';
-
 export const DATA: ResumeData = {
   // ═══════════════════════════════════════
   // Personal
@@ -49,7 +12,7 @@ export const DATA: ResumeData = {
   name: 'Christopher O. Castro',
   title: 'Full Stack Developer',
   bio: "Welcome to my portfolio! Dive in to explore my creations and discover the unique vision I bring to every project. Let's collaborate and achieve greatness together!",
-  resumeFile: resumePDF,
+  resumeFile: '/Christopher-Resume.pdf',
 
   // ═══════════════════════════════════════
   // Social Links
@@ -105,7 +68,15 @@ export const DATA: ResumeData = {
   // About
   // ═══════════════════════════════════════
   about: {
-    images: [CumLaude, Bohol, rs, img7, img6, Bohol, gdg],
+    images: [
+      '/about/CumLaude.jpg',
+      '/about/Bohol.jpg',
+      '/about/rs.jpg',
+      '/about/img7.jpg',
+      '/about/img6.jpg',
+      '/about/Bohol.jpg',
+      '/about/gdg.png',
+    ],
     imageRotationInterval: 3000,
     sectionRotationInterval: 5000,
     sections: [
@@ -299,7 +270,7 @@ export const DATA: ResumeData = {
     items: [
       {
         id: 1,
-        image: LoanChecker,
+        image: '/projects/LoanChecker.png',
         title: 'Loan Checker AI',
         desc: 'AI-Powered Loan Eligibility Prediction with 85% Accuracy',
         lang: 'Python, Pandas, NumPy, Seaborn, Streamlit, Scikit-learn, Colab, Kaggle',
@@ -314,7 +285,7 @@ export const DATA: ResumeData = {
       },
       {
         id: 2,
-        image: PizzaPy,
+        image: '/projects/PizzaPy.png',
         title: 'PizzaPy Cebu Website',
         desc: 'Hacktoberfest 2024 Contribution: UX/UI & Backend Enhancements',
         lang: 'Python, Django, HTML, CSS, JavaScript, Node.js, Cloud Hosting',
@@ -329,7 +300,7 @@ export const DATA: ResumeData = {
       },
       {
         id: 3,
-        image: useClassImg,
+        image: '/projects/useClass.png',
         title: 'useClass: Use Case to Class Diagram Converter',
         desc: 'From User Stories to Object-Oriented Design',
         lang: 'Next.js, Express js, TypeScript, Firebase',
@@ -346,7 +317,7 @@ export const DATA: ResumeData = {
       },
       {
         id: 4,
-        image: tohp,
+        image: '/projects/tohp.png',
         title: 'The One Hour Project',
         desc: 'Empowering Communities with Time-Based Volunteering',
         lang: 'Next.js, NestJS, TypeScript, Supabase, Google Cloud, PostgreSQL, Tailwind, ShadCN',
@@ -361,7 +332,7 @@ export const DATA: ResumeData = {
       },
       {
         id: 5,
-        image: HeartAlert,
+        image: '/projects/HeartAlert.png',
         title: 'Heart Disease Prediction',
         desc: 'Predicting Heart Failure Risk: Supervised Learning with 89% Accuracy',
         lang: 'Py, Pandas, NumPy, Matplotlib, Seaborn, Plotly, Streamlit, TF, Keras, Scikit-learn, Jupyter',
@@ -376,7 +347,7 @@ export const DATA: ResumeData = {
       },
       {
         id: 6,
-        image: cebby,
+        image: '/projects/cebby.png',
         title: 'Cebby',
         desc: 'Enhancing Community Engagement with Event Scheduling Features',
         lang: 'Next.js, TypeScript, Tailwind CSS, Supabase',
@@ -390,7 +361,7 @@ export const DATA: ResumeData = {
       },
       {
         id: 7,
-        image: appImg,
+        image: '/projects/app.png',
         title: 'Unshelf',
         desc: 'The Ultimate Food Saver Ecommerce App for a Sustainable Future',
         lang: 'Java, Kotlin, Android Studio, Maven, Firebase, Jetpack Compose, Google API',
@@ -427,7 +398,7 @@ export const DATA: ResumeData = {
         subtitle: 'Udemy',
         calendar: 'December 18, 2024',
         services: ['Web Development', 'Algorithms', 'Database Management'],
-        image: certWeb,
+        image: '/certificates/web.jpg',
         type: 'ed',
       },
       {
@@ -436,7 +407,7 @@ export const DATA: ResumeData = {
         subtitle: 'Udemy',
         calendar: 'February 9, 2025',
         services: ['Web Development', 'Algorithms', 'Database Management'],
-        image: certAngular,
+        image: '/certificates/angular.jpg',
         type: 'ed',
       },
       {
@@ -445,7 +416,7 @@ export const DATA: ResumeData = {
         subtitle: 'Udemy',
         calendar: 'December 25, 2023',
         services: ['Web Development', 'Algorithms', 'Database Management'],
-        image: certJS,
+        image: '/certificates/JS.png',
         type: 'ed',
       },
       {
@@ -454,7 +425,7 @@ export const DATA: ResumeData = {
         subtitle: 'Udemy',
         calendar: 'January 10, 2024',
         services: ['Web Development', 'Algorithms', 'Database Management'],
-        image: certPython,
+        image: '/certificates/Python.png',
         type: 'ed',
       },
       {
@@ -463,7 +434,7 @@ export const DATA: ResumeData = {
         subtitle: 'Udemy',
         calendar: 'May 25, 2024',
         services: ['Web Development', 'Algorithms', 'Database Management'],
-        image: certDataOff,
+        image: '/certificates/DataOff.png',
         type: 'ed',
       },
       {
@@ -472,7 +443,7 @@ export const DATA: ResumeData = {
         subtitle: 'Udemy',
         calendar: 'August 1, 2023',
         services: ['Web Development', 'Algorithms', 'Database Management'],
-        image: certBI,
+        image: '/certificates/BI.png',
         type: 'ed',
       },
       {
@@ -481,7 +452,7 @@ export const DATA: ResumeData = {
         subtitle: 'Udemy',
         calendar: 'January 21, 2025',
         services: ['Web Development', 'Algorithms', 'Database Management'],
-        image: certBI,
+        image: '/certificates/BI.png',
         type: 'ed',
       },
     ],
@@ -495,7 +466,7 @@ export const DATA: ResumeData = {
           'Developed frontend and database solutions for theonehourproject.app, directly collaborating with clients to deliver high-quality, production-ready software in a fast-paced 1-month sprint.',
           'Enhanced AI-driven UX for the GOAB Photobooth Kiosk, implementing prompt engineering to create an interactive face-swap experience used at Geeks on a Beach 2024 and DevFest 2024, impressing investors and developers.',
         ],
-        image: certSymph,
+        image: '/certificates/SymphCert.jpg',
         type: 'exp',
       },
       {
@@ -507,7 +478,7 @@ export const DATA: ResumeData = {
           'Authored AI/ML blogs focusing on real-world applications in healthcare and business, showcasing technical expertise and industry relevance.',
           'Designed and deployed AI-powered web applications, demonstrating the practical impact of AI in solving real-world problems.',
         ],
-        image: certAI,
+        image: '/certificates/AI-Pilipinas.jpg',
         type: 'exp',
       },
       {
@@ -519,7 +490,7 @@ export const DATA: ResumeData = {
           'Awarded Best Overall Contributor for significant open-source contributions, improving deployment processes and user experience for tech community platforms, including PizzaPy Cebu and Cebby (JavaScript Cebu Community).',
           'Delivered impactful feature enhancements and bug fixes, showcasing strong problem-solving and collaboration in open-source environments.',
         ],
-        image: certHacktoberfest,
+        image: '/certificates/hacktoberfest1.jpg',
         type: 'exp',
       },
       {
@@ -531,7 +502,7 @@ export const DATA: ResumeData = {
           'Spearheaded DevFest 2024, leading speaker coordination and program management, ensuring a seamless experience for hundreds of attendees and AI experts.',
           'Developed an automated certificate distribution system, significantly reducing manual work and enhancing participant satisfaction.',
         ],
-        image: certGDG,
+        image: '/certificates/GDG.png',
         type: 'exp',
       },
     ],
@@ -583,21 +554,21 @@ export const DATA: ResumeData = {
   testimonials: [
     {
       id: 1,
-      image: testimonial1,
+      image: '/testimonials/testimonial1.png',
       title: 'Jhon Doe',
       description:
         'A really good job, all aspects of the project were followed step by step and with good results.',
     },
     {
       id: 2,
-      image: testimonial2,
+      image: '/testimonials/testimonial2.png',
       title: 'Harry Clinton',
       description:
         'A really good job, all aspects of the project were followed step by step and with good results.',
     },
     {
       id: 3,
-      image: testimonial3,
+      image: '/testimonials/testimonial3.png',
       title: 'Sara Cill',
       description:
         'A really good job, all aspects of the project were followed step by step and with good results.',
@@ -621,3 +592,79 @@ export const DATA: ResumeData = {
       'Full Stack Developer specializing in React, Next.js, Python, and AI/ML. Portfolio showcasing projects, open-source contributions, and community leadership.',
   },
 };
+
+/**
+ * Build the system prompt for the chat API from the canonical DATA export.
+ * This replaces the old resume-text.ts file.
+ */
+export function buildSystemPrompt(): string {
+  const lines: string[] = [];
+
+  lines.push(
+    `You are ${DATA.name}'s portfolio assistant. Answer questions about Christopher's background, projects, skills, and experience. ` +
+    `Respond in first person as if you are Christopher. Keep responses under 150 words, professional yet friendly. ` +
+    `Only answer questions related to the portfolio — politely redirect off-topic questions.`
+  );
+  lines.push('');
+
+  lines.push('## Personal Info');
+  lines.push(`- Name: ${DATA.name}`);
+  lines.push(`- Title: ${DATA.title}`);
+  lines.push(`- Education: ${DATA.footer.education}`);
+  lines.push('');
+
+  lines.push('## Experience');
+  for (const exp of DATA.qualifications.experience) {
+    lines.push(`- ${exp.title} at ${exp.subtitle} (${exp.calendar})`);
+  }
+  lines.push('');
+
+  lines.push('## Leadership');
+  for (const section of DATA.about.sections) {
+    if (section.title.includes('Director') || section.title.includes('Advocate')) {
+      lines.push(`- ${section.title} ${section.subtitle}`);
+    }
+  }
+  lines.push('');
+
+  lines.push('## Achievements');
+  for (const section of DATA.about.sections) {
+    if (section.title.includes('Best') || section.title.includes('Contributor')) {
+      lines.push(`- ${section.title} ${section.subtitle}`);
+    }
+  }
+  lines.push('');
+
+  lines.push('## Skills');
+  for (const cat of DATA.skills.categories) {
+    lines.push(`- ${cat.title}: ${cat.skills.map(s => s.name).join(', ')}`);
+  }
+  lines.push('');
+
+  lines.push('## Projects');
+  for (const p of DATA.projects.items) {
+    lines.push(`- ${p.title}: ${p.desc} (${p.lang})`);
+  }
+  lines.push('');
+
+  lines.push('## Services');
+  for (const s of DATA.services.items) {
+    lines.push(`- ${s.titleLine1} ${s.titleLine2}`);
+  }
+  lines.push('');
+
+  lines.push('## Contact');
+  for (const c of DATA.contact.cards) {
+    lines.push(`- ${c.title}: ${c.data}`);
+  }
+  lines.push('');
+
+  lines.push('## Social Links');
+  for (const link of DATA.socialLinks) {
+    if (link.url) {
+      lines.push(`- ${link.name}: ${link.url}`);
+    }
+  }
+
+  return lines.join('\n');
+}

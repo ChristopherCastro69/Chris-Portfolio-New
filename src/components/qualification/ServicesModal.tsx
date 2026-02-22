@@ -1,13 +1,11 @@
 import React from "react";
-import { imgSrc, type ImageSrc } from "../../data/types";
-
 interface QualificationItem {
   id: number;
   title: string;
   subtitle: string;
   calendar: string;
   services: string[];
-  image: ImageSrc;
+  image: string;
   type: string;
 }
 
@@ -18,7 +16,7 @@ interface ServicesModalProps {
 }
 
 const ServicesModal: React.FC<ServicesModalProps> = ({ activeState, item, activeTab }) => {
-  const imageSrcStr = imgSrc(item.image);
+  const imageSrcStr = item.image;
 
   if (item.type === "exp") {
     return (

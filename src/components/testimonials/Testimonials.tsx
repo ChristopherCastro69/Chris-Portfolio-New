@@ -1,6 +1,5 @@
 import React from 'react';
 import { DATA } from '../../data/resume';
-import { imgSrc } from '../../data/types';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -32,7 +31,7 @@ const Testimonials = () => {
         {DATA.testimonials.map(({ id, image, title, description }) => {
           return (
             <SwiperSlide className="testimonial_card" key={id}>
-              <img src={imgSrc(image)} alt="" className="testimonial_img" />
+              <img src={image} alt="" className="testimonial_img" />
               <h3 className="testimonial_name">{title}</h3>
               <p className="testimonial_description">{description}</p>
             </SwiperSlide>

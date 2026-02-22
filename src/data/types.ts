@@ -3,16 +3,6 @@
  * All portfolio content is typed here and consumed via resume.tsx.
  */
 
-import type { StaticImageData } from 'next/image';
-
-/** Image fields accept static imports (StaticImageData) or URL strings */
-export type ImageSrc = StaticImageData | string;
-
-/** Resolve ImageSrc to a string URL for use in <img src> */
-export function imgSrc(img: ImageSrc): string {
-  return typeof img === 'string' ? img : img.src;
-}
-
 export interface SocialLink {
   name: string;
   url: string;
@@ -42,7 +32,7 @@ export interface AboutSection {
 }
 
 export interface About {
-  images: ImageSrc[];
+  images: string[];
   imageRotationInterval: number;
   sectionRotationInterval: number;
   sections: AboutSection[];
@@ -81,7 +71,7 @@ export interface Service {
 
 export interface ProjectItem {
   id: number;
-  image: ImageSrc;
+  image: string;
   title: string;
   desc: string;
   lang: string;
@@ -101,7 +91,7 @@ export interface QualificationEntry {
   subtitle: string;
   calendar: string;
   services: string[];
-  image: ImageSrc;
+  image: string;
   type: 'ed' | 'exp';
 }
 
@@ -130,7 +120,7 @@ export interface Contact {
 
 export interface TestimonialItem {
   id: number;
-  image: ImageSrc;
+  image: string;
   title: string;
   description: string;
 }
