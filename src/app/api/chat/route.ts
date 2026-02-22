@@ -2,10 +2,55 @@ import { NextResponse } from 'next/server';
 import { buildSystemPrompt } from '../../../data/resume';
 
 const SYSTEM_PROMPT = buildSystemPrompt();
+const MEM0_BASE_URL = 'https://api.mem0.ai/v1';
+
+async function searchMemories(query: string, userId: string): Promise<string> {
+  const apiKey = process.env.MEM0_API_KEY;
+  if (!apiKey) return '';
+
+  try {
+    const res = await fetch(`${MEM0_BASE_URL}/memories/search/`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Token ${apiKey}`,
+      },
+      body: JSON.stringify({ query, user_id: userId }),
+    });
+
+    if (!res.ok) return '';
+
+    const data = await res.json();
+    if (!Array.isArray(data) || data.length === 0) return '';
+
+    const memories = data
+      .slice(0, 5)
+      .map((m: { memory: string }) => m.memory)
+      .join('\n- ');
+
+    return `\n\nRelevant context from previous conversations with this visitor:\n- ${memories}`;
+  } catch {
+    return '';
+  }
+}
+
+function storeMemory(messages: { role: string; content: string }[], userId: string) {
+  const apiKey = process.env.MEM0_API_KEY;
+  if (!apiKey) return;
+
+  fetch(`${MEM0_BASE_URL}/memories/`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Token ${apiKey}`,
+    },
+    body: JSON.stringify({ messages, user_id: userId }),
+  }).catch(() => {});
+}
 
 export async function POST(request: Request) {
   try {
-    const { message } = await request.json();
+    const { message, userId } = await request.json();
 
     if (!message || typeof message !== 'string') {
       return NextResponse.json(
@@ -22,6 +67,9 @@ export async function POST(request: Request) {
       );
     }
 
+    // Search Mem0 for relevant past context
+    const memoryContext = userId ? await searchMemories(message, userId) : '';
+
     const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
       method: 'POST',
       headers: {
@@ -31,7 +79,7 @@ export async function POST(request: Request) {
       body: JSON.stringify({
         model: 'llama-3.1-8b-instant',
         messages: [
-          { role: 'system', content: SYSTEM_PROMPT },
+          { role: 'system', content: SYSTEM_PROMPT + memoryContext },
           { role: 'user', content: message },
         ],
         max_tokens: 300,
@@ -50,6 +98,17 @@ export async function POST(request: Request) {
 
     const data = await response.json();
     const reply = data.choices?.[0]?.message?.content || 'Sorry, I could not process that.';
+
+    // Fire-and-forget: store conversation in Mem0
+    if (userId) {
+      storeMemory(
+        [
+          { role: 'user', content: message },
+          { role: 'assistant', content: reply },
+        ],
+        userId
+      );
+    }
 
     return NextResponse.json({ reply });
   } catch (error) {

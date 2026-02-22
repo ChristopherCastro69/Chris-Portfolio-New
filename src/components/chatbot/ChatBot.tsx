@@ -7,6 +7,16 @@ interface Message {
   content: string;
 }
 
+const getUserId = (): string => {
+  const key = 'portfolio_chat_user_id';
+  let id = localStorage.getItem(key);
+  if (!id) {
+    id = `visitor_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
+    localStorage.setItem(key, id);
+  }
+  return id;
+};
+
 const ChatBot: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
@@ -14,7 +24,12 @@ const ChatBot: React.FC = () => {
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [userId, setUserId] = useState<string | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    setUserId(getUserId());
+  }, []);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -33,7 +48,7 @@ const ChatBot: React.FC = () => {
       const res = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: trimmed }),
+        body: JSON.stringify({ message: trimmed, userId }),
       });
       const data = await res.json();
       setMessages((prev) => [
