@@ -35,11 +35,16 @@ chris-portfolio/
 │   ├── data/
 │   │   ├── resume.tsx       # Canonical DATA export (single source of truth)
 │   │   └── types.ts         # TypeScript type definitions
-│   ├── hooks/
-│   │   ├── useScrollPosition.ts
-│   │   └── useInterval.ts
-│   └── assets/              # Images, certificates
-├── public/                  # Static files (resume PDF, profile image)
+│   └── hooks/
+│       ├── useScrollPosition.ts
+│       └── useInterval.ts
+├── public/                  # Static assets
+│   ├── about/               # About section images
+│   ├── certificates/        # Certificate images
+│   ├── projects/            # Project screenshots
+│   ├── testimonials/        # Testimonial avatars
+│   ├── Graduate.jpg         # Profile image
+│   └── Christopher-Resume.pdf
 ├── package.json
 ├── next.config.mjs
 └── tsconfig.json
@@ -85,7 +90,7 @@ npm start
 
 **To update your resume, edit ONE file: `src/data/resume.tsx`**
 
-Types are defined in `src/data/types.ts`. Image fields use `ImageSrc` (accepts `StaticImageData` or `string`). Use `imgSrc()` helper to resolve to string for `<img src>`.
+Types are defined in `src/data/types.ts`. All image fields are plain `string` paths pointing to files in `public/`.
 
 ## Custom Hooks
 
@@ -116,9 +121,8 @@ GROQ_API_KEY=your_groq_api_key
 ## Common Tasks
 
 ### Adding a New Project
-1. Add image to `src/assets/projects/`
-2. Import the image in `src/data/resume.tsx`
-3. Add entry to `DATA.projects.items`
+1. Add image to `public/projects/`
+2. Add entry to `DATA.projects.items` with the image path (e.g. `'/projects/my-project.png'`)
 
 ### Adding a New Skill
 1. Edit `DATA.skills.categories` in `src/data/resume.tsx`
@@ -135,7 +139,5 @@ GROQ_API_KEY=your_groq_api_key
 ## Important Notes
 
 - **Do not commit `.env.local`** — Contains sensitive API keys
-- **Images are statically imported** — Use `imgSrc()` helper from `types.ts` for `<img src>`
 - **UI must stay consistent** — Any changes should preserve the existing visual design
 - **Mobile-first** — Always test responsive design at all breakpoints
-- **`packages/` directory** — Legacy CRA monorepo structure (can be removed)
