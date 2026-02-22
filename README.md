@@ -1,82 +1,72 @@
 # Chris Portfolio
 
-A personal portfolio monorepo with React frontend and Python FastAPI backend (with future RAG capabilities).
+Personal portfolio website for Christopher Castro, built with Next.js 14 (App Router) and TypeScript.
 
-## Project Structure
+## Tech Stack
 
-```
-chris-portfolio/
-  packages/
-    frontend/          # React TypeScript application
-    backend/           # Python FastAPI backend (placeholder)
-    shared/            # Shared types and schemas
-  docker-compose.yml   # Container orchestration
-  package.json         # Root workspace configuration
-```
+- **Framework:** Next.js 14 with App Router + TypeScript
+- **Styling:** CSS with CSS Variables (mobile-first, no Tailwind)
+- **Icons:** Unicons & Boxicons via CDN
+- **Email:** EmailJS (server-side via `/api/contact`)
+- **Chatbot:** Groq API via `/api/chat`
+- **Carousel:** Swiper.js
 
 ## Getting Started
 
 ### Prerequisites
 
 - Node.js >= 18.0.0
-- npm or pnpm
-- Python 3.10+ (for backend, when ready)
 
-### Installation
+### Install & Run
 
 ```bash
-# Install dependencies for all packages
+# Install dependencies
 npm install
 
-# Or with pnpm
-pnpm install
-```
-
-### Development
-
-```bash
-# Run frontend only
-npm run dev:frontend
-
-# Run backend only (requires Python setup)
-npm run dev:backend
-
-# Run both (requires concurrently)
+# Run development server
 npm run dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
 ```
 
-### Building
+## Project Structure
 
-```bash
-# Build frontend for production
-npm run build:frontend
+```
+chris-portfolio/
+├── src/
+│   ├── app/           # Pages, layouts, API routes, global CSS
+│   ├── components/    # React components organized by feature
+│   ├── data/          # resume.tsx (single source of truth) + types
+│   └── hooks/         # Custom React hooks
+├── public/            # Static assets (images, resume PDF)
+├── package.json
+├── next.config.mjs
+└── tsconfig.json
 ```
 
-## Packages
-
-### Frontend (`packages/frontend`)
-
-React 18 portfolio website with TypeScript. Features:
-- Responsive design (mobile-first)
-- Component-based architecture
-- Data service layer for API integration
-- Custom hooks for reusable logic
-
-### Backend (`packages/backend`)
-
-Python FastAPI backend (placeholder). Planned features:
-- RESTful API endpoints
-- RAG-based portfolio Q&A
-- Vector database integration
-- Contact form handling
-
-### Shared (`packages/shared`)
-
-Shared types and JSON schemas for data validation across packages.
+All portfolio content is driven by a single data file: `src/data/resume.tsx`.
 
 ## Environment Variables
 
-See `packages/frontend/.env.example` for frontend configuration.
+Create `.env.local` at the project root:
+
+```env
+# EmailJS (for /api/contact)
+EMAILJS_SERVICE_ID=your_service_id
+EMAILJS_TEMPLATE_ID=your_template_id
+EMAILJS_PUBLIC_KEY=your_public_key
+
+# Groq (for /api/chat)
+GROQ_API_KEY=your_groq_api_key
+```
+
+## Deployment
+
+Deployed on [Vercel](https://vercel.com). Push to `master` to trigger a production deploy.
 
 ## License
 

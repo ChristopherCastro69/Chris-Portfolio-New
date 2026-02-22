@@ -11,6 +11,8 @@ coverage/
 # Production builds
 build/
 dist/
+.next/
+out/
 
 # Environment files
 .env
@@ -34,26 +36,6 @@ pnpm-debug.log*
 # OS
 .DS_Store
 Thumbs.db
-
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-venv/
-ENV/
-env/
-.venv/
-.eggs/
-*.egg-info/
-*.egg
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-
-# Jupyter
-.ipynb_checkpoints/
 
 # Claude
 .claude/
