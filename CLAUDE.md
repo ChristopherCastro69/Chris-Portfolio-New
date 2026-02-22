@@ -2,167 +2,140 @@
 
 ## Project Overview
 
-This is Christopher Castro's personal portfolio website, structured as a monorepo with a React TypeScript frontend and a Python FastAPI backend (placeholder for future RAG implementation).
+Christopher Castro's personal portfolio website built with Next.js 14 App Router and TypeScript. All portfolio content lives in a single canonical data file (`src/data/resume.tsx`).
 
 ## Repository Structure
 
 ```
 chris-portfolio/
-├── packages/
-│   ├── frontend/          # React 18 + TypeScript portfolio app
-│   │   ├── src/
-│   │   │   ├── assets/        # Images, PDFs, certificates
-│   │   │   ├── components/    # React components by feature
-│   │   │   ├── data/          # JSON data files
-│   │   │   ├── hooks/         # Custom React hooks
-│   │   │   ├── services/      # Data fetching service
-│   │   │   └── types/         # TypeScript type definitions
-│   │   ├── public/
-│   │   ├── package.json
-│   │   └── tsconfig.json
-│   ├── backend/           # Python FastAPI (placeholder)
-│   │   ├── app/
-│   │   │   ├── api/v1/
-│   │   │   ├── core/
-│   │   │   └── services/
-│   │   ├── requirements.txt
-│   │   └── pyproject.toml
-│   └── shared/            # Shared types and schemas
-│       ├── types/
-│       └── schemas/
-├── docker-compose.yml
-├── package.json           # Root workspace config
-└── pnpm-workspace.yaml
+├── src/
+│   ├── app/
+│   │   ├── page.tsx                 # Home (all sections)
+│   │   ├── layout.tsx               # Root layout + CDN links
+│   │   ├── globals.css              # All CSS combined
+│   │   ├── projects/page.tsx        # Projects archive table
+│   │   ├── certifications/page.tsx  # Certs archive table
+│   │   └── api/
+│   │       ├── contact/route.ts     # Server-side EmailJS
+│   │       └── chat/route.ts        # Groq chatbot
+│   ├── components/                  # React components by feature
+│   │   ├── common/          # ErrorBoundary, Loading
+│   │   ├── header/          # Navigation
+│   │   ├── home/            # Hero section
+│   │   ├── about/           # About with image carousel
+│   │   ├── skills/          # Skills grid
+│   │   ├── services/        # Service offerings
+│   │   ├── project/         # Projects with filtering
+│   │   ├── qualification/   # Education/Experience tabs
+│   │   ├── contact/         # Contact form (server-side)
+│   │   ├── footer/          # Footer with social links
+│   │   ├── scrollup/        # Scroll-to-top button
+│   │   ├── chatbot/         # AI chatbot widget
+│   │   └── testimonials/    # Testimonials (Swiper carousel)
+│   ├── data/
+│   │   ├── resume.tsx       # Canonical DATA export (single source of truth)
+│   │   └── types.ts         # TypeScript type definitions
+│   ├── hooks/
+│   │   ├── useScrollPosition.ts
+│   │   └── useInterval.ts
+│   └── assets/              # Images, certificates
+├── public/                  # Static files (resume PDF, profile image)
+├── package.json
+├── next.config.mjs
+└── tsconfig.json
 ```
 
 ## Tech Stack
 
-### Frontend
-- **Framework:** React 18.2 with TypeScript
-- **Build Tool:** Create React App (react-scripts)
-- **Styling:** CSS with CSS Variables (no CSS-in-JS)
-- **Icons:** Unicons (uil-*) and Boxicons (bx-*)
-- **Email:** EmailJS for contact form
+- **Framework:** Next.js 14 with App Router + TypeScript
+- **Styling:** CSS with CSS Variables (no Tailwind, no CSS-in-JS)
+- **Icons:** Unicons (uil-*) and Boxicons (bx-*) via CDN
+- **Email:** EmailJS (server-side via `/api/contact`)
+- **Chatbot:** Groq API (llama-3.1-8b-instant) via `/api/chat`
 - **Carousel:** Swiper.js
-
-### Backend (Planned)
-- **Framework:** FastAPI
-- **Database:** PostgreSQL (optional)
-- **AI/RAG:** LangChain, OpenAI/Anthropic, Pinecone/Chroma
 
 ## Key Commands
 
 ```bash
-# Install dependencies (from root)
+# Install dependencies
 npm install
 
-# Run frontend development server
-npm run dev:frontend
-# Or from packages/frontend:
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Start production server
 npm start
-
-# Build frontend for production
-npm run build:frontend
-
-# Run tests
-npm run test:frontend
 ```
 
-## Development Patterns
+## Data Layer
 
-### Data Layer
-All portfolio data is stored in JSON files under `packages/frontend/src/data/`:
-- `personal.json` - Name, bio, social links
-- `skills.json` - Technical skills by category
-- `projects.json` - Portfolio projects
-- `qualifications.json` - Education and experience
-- `services.json` - Service offerings
-- `about.json` - About section content
-- `contact.json` - Contact information
+**All portfolio content lives in `src/data/resume.tsx`** — a single `DATA` export containing:
+- Personal info, social links, navbar items
+- About section (images, achievements, rotating sections)
+- Skills (4 categories)
+- Services (3 items)
+- Projects (7 items with image imports)
+- Qualifications (education + experience with certificate images)
+- Contact (cards + form config)
+- Testimonials
+- Footer, SEO metadata
 
-The `dataService.ts` abstracts data fetching and can switch between local JSON and API based on `REACT_APP_USE_API` environment variable.
+**To update your resume, edit ONE file: `src/data/resume.tsx`**
 
-### Custom Hooks
+Types are defined in `src/data/types.ts`. Image fields use `ImageSrc` (accepts `StaticImageData` or `string`). Use `imgSrc()` helper to resolve to string for `<img src>`.
+
+## Custom Hooks
+
 - `useScrollPosition(threshold)` - Scroll position detection
-- `usePortfolioData(dataType)` - Data fetching with loading/error states
 - `useInterval(callback, delay, pause)` - Safe interval management
 
-### Component Structure
-Components are organized by feature:
-```
-components/
-├── common/          # Shared: ErrorBoundary, Loading
-├── header/          # Navigation
-├── home/            # Hero section
-├── about/           # About with image carousel
-├── skills/          # Skills grid
-├── services/        # Service offerings
-├── project/         # Projects with filtering
-├── qualification/   # Education/Experience tabs
-├── contact/         # Contact form
-├── footer/          # Footer with social links
-├── scrollup/        # Scroll-to-top button
-└── testimonials/    # Testimonials (feature-flagged)
-```
+## CSS Conventions
 
-### TypeScript Conventions
-- All components use `React.FC` type
-- Props interfaces are defined above components
-- Data types are in `src/types/portfolio.ts`
-
-### CSS Conventions
+- All CSS is in `src/app/globals.css` (concatenated from component CSS files)
 - BEM-lite naming: `.component_element--modifier`
-- CSS variables for colors, fonts, spacing (see `App.css`)
+- CSS variables for colors, fonts, spacing
 - Mobile-first with max-width breakpoints: 992px, 768px, 576px, 350px
 
 ## Environment Variables
 
-Create `.env.local` in `packages/frontend/`:
+Create `.env.local` at the project root:
 
 ```env
-# API Configuration
-REACT_APP_USE_API=false
-REACT_APP_API_URL=http://localhost:8000/api
+# EmailJS (server-side, for /api/contact)
+EMAILJS_SERVICE_ID=your_service_id
+EMAILJS_TEMPLATE_ID=your_template_id
+EMAILJS_PUBLIC_KEY=your_public_key
 
-# EmailJS (required for contact form)
-REACT_APP_EMAILJS_SERVICE_ID=your_service_id
-REACT_APP_EMAILJS_TEMPLATE_ID=your_template_id
-REACT_APP_EMAILJS_PUBLIC_KEY=your_public_key
-
-# Feature Flags
-REACT_APP_ENABLE_TESTIMONIALS=false
+# Groq (for /api/chat)
+GROQ_API_KEY=your_groq_api_key
 ```
 
 ## Common Tasks
 
 ### Adding a New Project
 1. Add image to `src/assets/projects/`
-2. Add entry to `src/data/projects.json`
-3. Follow existing project structure with id, image, title, desc, lang, link, repo, category, services
+2. Import the image in `src/data/resume.tsx`
+3. Add entry to `DATA.projects.items`
 
 ### Adding a New Skill
-1. Edit `src/data/skills.json`
+1. Edit `DATA.skills.categories` in `src/data/resume.tsx`
 2. Add to appropriate category (frontend, backend, data, tools)
-3. Include name, level (Basic/Intermediate/Advanced), percentage
 
 ### Modifying Contact Info
-1. Edit `src/data/contact.json`
-2. Update contact cards and form configuration
+1. Edit `DATA.contact.cards` in `src/data/resume.tsx`
 
-### Enabling Testimonials
-Set `REACT_APP_ENABLE_TESTIMONIALS=true` in `.env.local`
+## API Routes
+
+- **POST `/api/contact`** — Sends email via EmailJS REST API (server-side)
+- **POST `/api/chat`** — Portfolio chatbot via Groq API
 
 ## Important Notes
 
-- **Do not commit `.env.local`** - Contains sensitive EmailJS credentials
-- **Images are imported** - Project/certificate images use static imports, not URLs
-- **No backend yet** - Backend is a placeholder for future RAG implementation
-- **UI must stay consistent** - Any changes should preserve the existing visual design
-- **Mobile-first** - Always test responsive design at all breakpoints
-
-## Future Plans
-
-1. **RAG Backend**: Implement Python FastAPI with LangChain for portfolio Q&A
-2. **Vector Database**: Store embeddings of portfolio content
-3. **API Integration**: Switch frontend to fetch from backend API
-4. **Docker Deployment**: Use docker-compose for full stack deployment
+- **Do not commit `.env.local`** — Contains sensitive API keys
+- **Images are statically imported** — Use `imgSrc()` helper from `types.ts` for `<img src>`
+- **UI must stay consistent** — Any changes should preserve the existing visual design
+- **Mobile-first** — Always test responsive design at all breakpoints
+- **`packages/` directory** — Legacy CRA monorepo structure (can be removed)

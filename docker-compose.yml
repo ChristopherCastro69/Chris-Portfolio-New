@@ -1,43 +1,11 @@
 version: '3.8'
 
 services:
-  frontend:
+  web:
     build:
-      context: ./packages/frontend
+      context: .
       dockerfile: Dockerfile
     ports:
       - "3000:3000"
-    environment:
-      - REACT_APP_API_URL=http://localhost:8000/api
-      - REACT_APP_USE_API=true
-    depends_on:
-      - backend
-    volumes:
-      - ./packages/frontend/src:/app/src:ro
-
-  backend:
-    build:
-      context: ./packages/backend
-      dockerfile: Dockerfile
-    ports:
-      - "8000:8000"
-    environment:
-      - ENVIRONMENT=development
-      - DATABASE_URL=postgresql://user:password@db:5432/portfolio
-    volumes:
-      - ./packages/backend/app:/app/app:ro
-
-  # Uncomment when database is needed
-  # db:
-  #   image: postgres:15
-  #   environment:
-  #     POSTGRES_USER: user
-  #     POSTGRES_PASSWORD: password
-  #     POSTGRES_DB: portfolio
-  #   volumes:
-  #     - postgres_data:/var/lib/postgresql/data
-  #   ports:
-  #     - "5432:5432"
-
-# volumes:
-#   postgres_data:
+    env_file:
+      - .env.local

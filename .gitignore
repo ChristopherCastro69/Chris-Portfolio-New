@@ -11,6 +11,8 @@ coverage/
 # Production builds
 build/
 dist/
+.next/
+out/
 
 # Environment files
 .env
