@@ -1,5 +1,23 @@
 import { NextResponse } from 'next/server';
 import { buildSystemPrompt } from '../../../data/resume';
+import { getSupabase } from '../../../lib/supabase';
+
+function logChatMessages(visitorId: string, userContent: string, assistantContent: string) {
+  getSupabase()
+    .from('chat_logs')
+    .insert([
+      { visitor_id: visitorId, role: 'user', content: userContent },
+      { visitor_id: visitorId, role: 'assistant', content: assistantContent },
+    ])
+    .then();
+}
+
+function logApiUsage(service: string, endpoint: string, tokensUsed?: number) {
+  getSupabase()
+    .from('api_usage')
+    .insert({ service, endpoint, tokens_used: tokensUsed || null })
+    .then();
+}
 
 const SYSTEM_PROMPT = buildSystemPrompt();
 const MEM0_BASE_URL = 'https://api.mem0.ai/v1';
@@ -19,6 +37,8 @@ async function searchMemories(query: string, userId: string): Promise<string> {
     });
 
     if (!res.ok) return '';
+
+    logApiUsage('mem0', 'memories/search');
 
     const data = await res.json();
     if (!Array.isArray(data) || data.length === 0) return '';
@@ -46,6 +66,8 @@ function storeMemory(messages: { role: string; content: string }[], userId: stri
     },
     body: JSON.stringify({ messages, user_id: userId }),
   }).catch(() => {});
+
+  logApiUsage('mem0', 'memories/store');
 }
 
 export async function POST(request: Request) {
@@ -98,6 +120,12 @@ export async function POST(request: Request) {
 
     const data = await response.json();
     const reply = data.choices?.[0]?.message?.content || 'Sorry, I could not process that.';
+
+    // Fire-and-forget: log Groq usage and chat messages
+    logApiUsage('groq', 'chat/completions', data.usage?.total_tokens);
+    if (userId) {
+      logChatMessages(userId, message, reply);
+    }
 
     // Fire-and-forget: store conversation in Mem0
     if (userId) {

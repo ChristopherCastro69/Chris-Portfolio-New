@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import PageViewTracker from '../components/dashboard/PageViewTracker';
 
 export const metadata: Metadata = {
   title: 'Christopher Castro | Full Stack Developer',
@@ -32,7 +33,10 @@ export default function RootLayout({
           href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <PageViewTracker />
+        {children}
+      </body>
     </html>
   );
 }
